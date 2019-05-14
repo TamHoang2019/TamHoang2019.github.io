@@ -1,5 +1,22 @@
 *{margin: 0; padding: 0;}
 
+.sidebar {
+    
+}
+
+.box-shadow {
+    box-shadow: 0 0 10px #e0dcdc;
+}
+.header-bar{
+    border-bottom: 5px solid #12a3b3;
+}
+
+em.text-monospace {
+    font-size: 1.0rem;
+    padding-left: 3px;
+    color: #5d5b5b;
+}
+
 .toOpen {
     background: url(images/5.jpg) no-repeat;
     z-index: 2;
