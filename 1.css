@@ -1,0 +1,43 @@
+*{margin: 0; padding: 0;}
+
+.toOpen {
+    background: url(images/5.jpg) no-repeat;
+    z-index: 2;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    background-position: -20px;
+    box-shadow: 0 0 6px #471922;
+    transition: 1s;
+    transform-origin: 50% 100%;
+}
+
+.toOpen:hover {
+    transform: rotateX(180deg);
+}
+
+.text {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #ca5659;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    line-height: 180px;
+    color: #dece5f;
+    box-shadow: 0 0 2px #98232c;
+}
+
+.parent {
+    background: url(images/5.jpg) no-repeat;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    position: relative;
+    /* perspective: 1200px; */
+} 
