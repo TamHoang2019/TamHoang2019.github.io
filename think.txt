@@ -1,0 +1,19 @@
+sidebar nội dung vẫn vậy, chỉ thay đổi độ rộng. 
+khi màn hình lớn: 
+  bấm nút Mục lục lần 1: chuyển giao diện thành màn hình nhỏ, nghĩa là:
+  - sidebar biến mất.
+  - btn mục lục thu nhỏ lại. 
+  - phần content bên phải mở rộng toàn màn hình. 
+  bấm nút Mục lục lần 2: chuyển giao diện trở về lớn như bình thường, nghĩa là:
+  - sidebar vẫn ở chỗ cũ.
+  - btn mục lục phóng lớn ra, chỗ cũ. 
+  - phần content bên phải thu nhỏ lại chiếm 9 cột. 
+KHI MÀN HÌNH NHỎ:
+ - phần content bên phải chiếm 12 cột.
+ - btn mục lục nhỏ, xuất hiện cách top 185px, cố định. 
+  khi bấm vào btn nhỏ này thì: 
+  - xuất hiện sidebar bên trái với kích thước ngang 300px. 
+  - phần content bên phải vẫn chiếm 12 cột. 
+  bấm vào btn nhỏ lần nữa, hoặc là bất kỳ chỗ nào, thì đều làm biến mất sidebar và hiện nội dung content.
+  
+Quy tắc đặt tên: 
