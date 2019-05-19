@@ -1,4 +1,4 @@
-.toOpen {
+#demo1 .toOpen {
   background: url(images/5.jpg) no-repeat;
   z-index: 2;
   width: 180px;
@@ -10,14 +10,27 @@
   background-position: -20px;
   box-shadow: 0 0 6px #471922;
   transition: 1s;
+}
+#demo1 .col1 .toOpen{
   transform-origin: 50% 100%;
 }
-
-.toOpen:hover {
+#demo1 .col1 .toOpen:hover {
   transform: rotateX(180deg);
 }
+#demo1 .col2 .toOpen{
+  transform-origin: 100% 50%;
+}
+#demo1 .col2 .toOpen:hover {
+  transform: rotateY(180deg);
+}
+#demo1 .col3 .toOpen{
+  transform-origin: 0 50%;
+}
+#demo1 .col3 .toOpen:hover {
+  transform: rotateY(-180deg);
+}
 
-.text {
+#demo1 .text {
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -31,7 +44,7 @@
   box-shadow: 0 0 2px #98232c;
 }
 
-.parent {
+#demo1 .parent {
   background: url(images/5.jpg) no-repeat;
   width: 220px;
   height: 220px;

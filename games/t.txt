@@ -1,0 +1,9 @@
+game này có tác dụng là, kết nối 2 hình ảnh giống nhau. 
+Nếu 2 hình giống được chọn thì điểm sẽ nhảy lên. Và 2 hình biến mất. 
+
+Nếu 2 hình lật lên ko giống nhau thì 2 hình bị úp ngược lại. 
+
+nếu play thì chương trình chạy từ đầu bình thường.
+sau đó nó game over rồi thì replay mình cũng muốn nó refesh hết  lại như play từ đầu. Làm thế nào?
+Còn cái lỗi là viên gạch cuối ko biến mất?
+Với lại mình muốn là mỗi lần play là toạ độ xuất hiện ban đầu của quả banh là khác nhau để quỹ đạo của nó thay đổi đi, ko phải lần nào chơi cũng giống nhau.
