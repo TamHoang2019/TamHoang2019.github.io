@@ -1,13 +1,11 @@
 var wrapper = document.querySelector('#game01 .wrapper'),
-    nenReplay = document.querySelector('#game01 .nenReplay'),
-    nenPlay = document.querySelector('#game01 .nenPlay'),
+    nenden = document.querySelector('#game01 .nenden'),
+    nenden1 = document.querySelector('#game01 .nenden1'),
     result = document.querySelector('#game01 #result'),
     score = document.querySelector('#game01 #score'),
     play = document.querySelector('#game01 #play'),
     replay = document.querySelector('#game01 #replay'),
-    count = document.querySelector('#game01 .count'),
-    img = document.getElementById('brick');
-
+    isReplay = false;
     
 var canvas = document.getElementById('game1'),
     context = canvas.getContext('2d');
@@ -15,24 +13,21 @@ var canvas = document.getElementById('game1'),
     // height = window.outerHeight;
     // canvas.width = 90*width/100;
     // canvas.height = 55*height/100;
-  canvas.width = wrapper.offsetWidth;
-  canvas.height = wrapper.offsetHeight;
-  var pat = context.createPattern(img, "repeat");
-  
-//random ra gia tri giua x va y
-function randomX(x, y){
-  return Math.floor(Math.random() * (x - y + 1)) + y;
-}
+    canvas.width = wrapper.offsetWidth;
+    canvas.height = wrapper.offsetHeight;
 var ball = {
-  x: randomX(0.8*canvas.width, 20),
-  y: randomX(0.3*canvas.height, 20),
+  x: randomX(420),
+  y: randomX(80),
   dx: 5,
   dy: 2,
   radius: 10
 }
+function randomX(x){
+  return Math.floor(Math.random() * x) + 20;
+}
 
 var paddle = {
-  width: 0.2*canvas.width,
+  width: 220,
   height: 10,
   x: 0,
   y: canvas.height - 10,
@@ -42,55 +37,33 @@ var paddle = {
 };
 
 var BrickConfig = {
-  offsetX: 50,
-  offsetY: 30,
-  marginRow: 20,
-  marginCol: 5,
-  width: 50,
+  offsetX: 110,
+  offsetY: 50,
+  marginRow: 35,
+  marginCol: 15,
+  width: 55,
   height: 15,
   totalRow: 4,
   totalCol: 8
 };
+
+var isGameOver = false;
+var isGameWin = false;
+var UserScore = 0;
+var MaxScrore = BrickConfig.totalCol * BrickConfig.totalRow;
+
 var BrickList = [];
-
-var isGameOver,isGameWin, isPause, UserScore, MaxScrore;
-khoiTaoViTri();
-function khoiTaoViTri(){
-  isGameOver = false;
-  isGameWin = false;
-  isPause = false;
-  UserScore = 0;
-
-  ball.x = randomX(0.8*canvas.width, 20); 
-  ball.y = randomX(0.3*canvas.height, 20); 
-  paddle.width = 0.2*canvas.width;
-  paddle.x = 0;
-  paddle.y = canvas.height - 10;
-  // BrickConfig.offsetX = 0.05 * canvas.width;
-  // BrickConfig.offsetY = 0.1 * canvas.height;
-  if(canvas.height/canvas.width >= 1/2){
-    BrickConfig.totalRow = Math.floor((0.6*canvas.height - BrickConfig.offsetY) / (BrickConfig.height + BrickConfig.marginRow));
-  } else {
-    BrickConfig.totalRow = Math.floor((0.5*canvas.height - BrickConfig.offsetY) / (BrickConfig.height + BrickConfig.marginRow));
+//khoi tao cac vien gach
+for(var i=0; i < BrickConfig.totalRow; i++){
+  for(var j=0; j < BrickConfig.totalCol; j++){
+    BrickList.push({
+      x: BrickConfig.offsetX + j * (BrickConfig.width + BrickConfig.marginCol),
+      y: BrickConfig.offsetY + i * (BrickConfig.height + BrickConfig.marginRow),
+      isBroken: false
+    })
   }
-  console.log(BrickConfig.totalRow, 'row');
-  BrickConfig.totalCol = Math.floor((canvas.width - BrickConfig.offsetX) / (BrickConfig.width + BrickConfig.marginCol));
-  console.log(BrickConfig.totalCol, 'col');
-
-  BrickList = [];
-  for(var i=0; i < BrickConfig.totalRow; i++){
-    for(var j=0; j < BrickConfig.totalCol; j++){
-     
-      BrickList.push({
-        x: BrickConfig.offsetX + j * (BrickConfig.width + BrickConfig.marginCol),
-        y: BrickConfig.offsetY + i * (BrickConfig.height + BrickConfig.marginRow),
-        isBroken: false
-      });
-    }
-  }
-  MaxScrore = BrickConfig.totalCol * BrickConfig.totalRow;
-  console.log(MaxScrore, 'col', BrickConfig.totalCol, 'row', BrickConfig.totalRow);
 }
+
 // ve hinh tron
 function drawBall(){
   context.beginPath();
@@ -117,7 +90,6 @@ function drawBricks(){
     if(!b.isBroken){
       context.beginPath();
       context.rect(b.x, b.y, BrickConfig.width, BrickConfig.height);
-      context.fillStyle = pat;
       context.fill();
       context.closePath();
     };
@@ -139,16 +111,6 @@ document.addEventListener('keyup', function(event){
   } else if(event.keyCode == 39) {
     paddle.isMovingRight = false;
   }
-});
-document.addEventListener('keypress', function(e){
-  if(e.keyCode == 32){
-    if(isPause) {
-      isPause = false;
-    } else {
-      isPause = true;
-    }
-  }
-  draw();
 });
 
 function handleCollideBounds(){
@@ -172,7 +134,6 @@ function handleCollideBrick(){
         ball.dy = -ball.dy;
         b.isBroken = true;
         UserScore += 1;
-        count.textContent = UserScore;
         if(UserScore >= MaxScrore) {
           isGameOver = true;
           isGameWin = true;
@@ -183,29 +144,18 @@ function handleCollideBrick(){
 }
 function updatePaddlePosition(){
     //xu ly ve paddle muot hon
-  if(paddle.isMovingLeft) {
+    if(paddle.isMovingLeft) {
     paddle.x -= paddle.speed;
   } else if(paddle.isMovingRight) {
     paddle.x += paddle.speed;
   }
-  //xu ly cho paddle va cham voi 2 ben duong bien 
+    //xu ly cho paddle va cham voi 2 ben duong bien 
   if(paddle.x < 0) {
     paddle.x = 0;
   } 
   else if(paddle.x > canvas.width - paddle.width) {
     paddle.x = canvas.width - paddle.width;
   }
-    //xu ly bat su kien dieu khien paddle bang chuot
-  canvas.addEventListener('mousemove', function(event){
-    toadoX = event.clientX;
-    paddle.x = toadoX - paddle.width/2;
-    if(paddle.x < 0) {
-      paddle.x = 0;
-    } 
-    else if(paddle.x > canvas.width - paddle.width) {
-      paddle.x = canvas.width - paddle.width;
-    }
-  });  
 }
 function updateBallPosition(){
   // thay doi toa do qua bong, gia tri cang lon thi di chuyen cang nhanh: xu ly toa do
@@ -218,7 +168,7 @@ function checkGameOver(){
   }
 }
 function handleGameOver(){
-  nenReplay.style.display = "block";
+  nenden.style.display = "block";
   score.textContent = `Your score is: ${UserScore}`;
 
   if(isGameWin){
@@ -227,7 +177,6 @@ function handleGameOver(){
     result.textContent = 'LOSS!';
   }
 }
-
 //ham tong the xu ly toan bo logic ve
 function draw(){
   if(!isGameOver){
@@ -253,21 +202,41 @@ function draw(){
     // vuot qua duong bien duoi thi game over
     checkGameOver();
     // ham de quy requestAnimationFrame()
-    if(!isPause) {
-      requestAnimationFrame(draw);
-    }
+    requestAnimationFrame(draw);
   } else {
     handleGameOver();
   }
 };
 
 play.addEventListener('click', function(){
-  nenPlay.style.display = "none";
+  nenden1.style.display = "none";
   draw();
 });
 
+function restart(){
+  ball.x = randomX(420);
+  ball.y = randomX(80);
+  paddle.x = 0;
+  paddle.y = canvas.height - 10;
+  isGameOver = false;
+  isGameWin = false;
+  UserScore = 0;
+  BrickList = [];
+  //khoi tao cac vien gach
+  for(var i=0; i < BrickConfig.totalRow; i++){
+    for(var j=0; j < BrickConfig.totalCol; j++){
+      BrickList.push({
+        x: BrickConfig.offsetX + j * (BrickConfig.width + BrickConfig.marginCol),
+        y: BrickConfig.offsetY + i * (BrickConfig.height + BrickConfig.marginRow),
+        isBroken: false
+      })
+    }
+  }
+
+}
 replay.addEventListener('click', function(){
-  khoiTaoViTri();
+  restart();
   draw();
-  nenReplay.style.display = "none";
+  nenden.style.display = "none";
+  
 });
