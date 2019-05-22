@@ -6,9 +6,13 @@ var wrapper = document.querySelector('#game01 .wrapper'),
     play = document.querySelector('#game01 #play'),
     replay = document.querySelector('#game01 #replay'),
     count = document.querySelector('#game01 .count'),
+    control = document.querySelector('#game01 .control'),
+    btnLeft = document.querySelector('#game01 .control .left'),
+    btnRight = document.querySelector('#game01 .control .right'),
+    btnPause = document.querySelector('#game01 .control .pause'),
     img = document.getElementById('brick');
 
-    
+   control.style.display="none"; 
 var canvas = document.getElementById('game1'),
     context = canvas.getContext('2d');
     // width = window.outerWidth;
@@ -123,6 +127,19 @@ function drawBricks(){
     };
   });
 }
+//xu ly bat su kien dieu khien paddle bang button
+btnLeft.addEventListener('click', function(){
+  paddle.isMovingLeft = true;
+});
+btnRight.addEventListener('click', function(){
+  paddle.isMovingRight = true;
+});
+btnLeft.addEventListener('mouseout', function(){
+  paddle.isMovingLeft = false;
+});
+btnRight.addEventListener('mouseout', function(){
+  paddle.isMovingRight = false;
+});
 // xu ly bat xu kien de dieu khien paddle bang ban phim
 // phai: keyCode 39
 // trai: keyCode 37
@@ -140,6 +157,7 @@ document.addEventListener('keyup', function(event){
     paddle.isMovingRight = false;
   }
 });
+//xu ly pause game cho desktop
 document.addEventListener('keypress', function(e){
   if(e.keyCode == 32){
     if(isPause) {
@@ -147,6 +165,15 @@ document.addEventListener('keypress', function(e){
     } else {
       isPause = true;
     }
+  }
+  draw();
+});
+//xu ly pause game cho mobile
+btnPause.addEventListener('click', function(e){
+  if(isPause) {
+    isPause = false;
+  } else {
+    isPause = true;
   }
   draw();
 });
@@ -263,6 +290,16 @@ function draw(){
 
 play.addEventListener('click', function(){
   nenPlay.style.display = "none";
+  if( navigator.userAgent.match(/Android/i)
+  || navigator.userAgent.match(/webOS/i)
+  || navigator.userAgent.match(/iPhone/i)
+  || navigator.userAgent.match(/iPad/i)
+  || navigator.userAgent.match(/iPod/i)
+  || navigator.userAgent.match(/BlackBerry/i)
+  ){
+    control.style.display = "block";
+  }
+  // control.style.display = "block";
   draw();
 });
 
