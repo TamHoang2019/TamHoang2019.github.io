@@ -72,9 +72,9 @@ button.btnSidebarSmall {
   margin-bottom:3px;
 }
 footer{
-  position: absolute;
+  /* position: absolute;
   bottom:0;
-  right:0;
+  right:0; */
 }
 
 /* utilities */
