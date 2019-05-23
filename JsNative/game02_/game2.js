@@ -1,19 +1,18 @@
-var wrapper = document.querySelector('#game01 .wrapper'),
-    nenReplay = document.querySelector('#game01 .nenReplay'),
-    nenPlay = document.querySelector('#game01 .nenPlay'),
-    result = document.querySelector('#game01 #result'),
-    score = document.querySelector('#game01 #score'),
-    play = document.querySelector('#game01 #play'),
-    replay = document.querySelector('#game01 #replay'),
-    count = document.querySelector('#game01 .count'),
-    control = document.querySelector('#game01 .control'),
-    btnLeft = document.querySelector('#game01 .control .left'),
-    btnRight = document.querySelector('#game01 .control .right'),
-    btnPause = document.querySelector('#game01 .control .pause'),
+var wrapper = document.querySelector('#game02 .wrapper'),
+    nenReplay = document.querySelector('#game02 .nenReplay'),
+    nenPlay = document.querySelector('#game02 .nenPlay'),
+    result = document.querySelector('#game02 #result'),
+    score = document.querySelector('#game02 #score'),
+    play = document.querySelector('#game02 #play'),
+    replay = document.querySelector('#game02 #replay'),
+    count = document.querySelector('#game02 .count'),
+    control = document.querySelector('#game02 .control'),
+    btnLeft = document.querySelector('#game02 .control .left'),
+    btnRight = document.querySelector('#game02 .control .right'),
+    btnPause = document.querySelector('#game02 .control .pause'),
     img = document.getElementById('brick');
 
-   control.style.display="none"; 
-var canvas = document.getElementById('game1'),
+var canvas = document.getElementById('game2'),
     context = canvas.getContext('2d');
     // width = window.outerWidth;
     // height = window.outerHeight;
@@ -128,16 +127,16 @@ function drawBricks(){
   });
 }
 //xu ly bat su kien dieu khien paddle bang button
-btnLeft.addEventListener('mousedown', function(){
+btnLeft.addEventListener('click', function(){
   paddle.isMovingLeft = true;
 });
-btnRight.addEventListener('mousedown', function(){
+btnRight.addEventListener('click', function(){
   paddle.isMovingRight = true;
 });
-btnLeft.addEventListener('mouseup', function(){
+btnLeft.addEventListener('mouseout', function(){
   paddle.isMovingLeft = false;
 });
-btnRight.addEventListener('mouseup', function(){
+btnRight.addEventListener('mouseout', function(){
   paddle.isMovingRight = false;
 });
 // xu ly bat xu kien de dieu khien paddle bang ban phim
@@ -290,16 +289,16 @@ function draw(){
 
 play.addEventListener('click', function(){
   nenPlay.style.display = "none";
-  // if( navigator.userAgent.match(/Android/i)
-  // || navigator.userAgent.match(/webOS/i)
-  // || navigator.userAgent.match(/iPhone/i)
-  // || navigator.userAgent.match(/iPad/i)
-  // || navigator.userAgent.match(/iPod/i)
-  // || navigator.userAgent.match(/BlackBerry/i)
-  // ){
-  //   control.style.display = "block";
-  // }
-  control.style.display = "block";
+  if( navigator.userAgent.match(/Android/i)
+  || navigator.userAgent.match(/webOS/i)
+  || navigator.userAgent.match(/iPhone/i)
+  || navigator.userAgent.match(/iPad/i)
+  || navigator.userAgent.match(/iPod/i)
+  || navigator.userAgent.match(/BlackBerry/i)
+  ){
+    control.style.display = "block";
+  }
+  // control.style.display = "block";
   draw();
 });
 
