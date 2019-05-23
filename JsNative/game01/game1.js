@@ -134,6 +134,18 @@ btnLeft.addEventListener('mousedown', function(){
 btnRight.addEventListener('mousedown', function(){
   paddle.isMovingRight = true;
 });
+btnLeft.addEventListener('touchstart', function(){
+  paddle.isMovingLeft = true;
+});
+btnRight.addEventListener('touchstart', function(){
+  paddle.isMovingRight = true;
+});
+btnLeft.addEventListener('touchend', function(){
+  paddle.isMovingLeft = false;
+});
+btnRight.addEventListener('touchend', function(){
+  paddle.isMovingRight = false;
+});
 btnLeft.addEventListener('mouseup', function(){
   paddle.isMovingLeft = false;
 });

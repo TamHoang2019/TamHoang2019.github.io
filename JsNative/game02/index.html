@@ -20,11 +20,6 @@
 		<button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button> <br><br>
 	</div>
 	<script>
-		function startGame(){
-			myGameArea.start();
-			myBird = new component(30, 30, "red", 10, 120);
-		};
-
 		var myGameArea = {
 			canvas: document.createElement('canvas'),
 			start: function(){
@@ -33,9 +28,18 @@
 				this.context = this.canvas.getContext('2d');
 				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 				this.interval = setInterval(updateGameArea, 20);
+				window.addEventListener('keydown', function(e){
+					myGameArea.key = e.keyCode;
+				});
+				window.addEventListener('keyup', function(e){
+					myGameArea.key = false;
+				});
 			},
 			clear: function(){
 				this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+			},
+			stop: function(){
+				clearInterval(this.interval);
 			}
 		};
 
@@ -54,14 +58,45 @@
 			this.newPos = function(){
 				this.x += this.speedX;
 				this.y += this.speedY;
-			}
+			};
+			this.crashWith = function(otherObj){
+				var myleft = this.x;
+				var myright = this.x + (this.width);
+				var mytop = this.y;
+				var mybottom = this.y + (this.height);
+				var otherleft = otherObj.x;
+				var otherright = otherObj.x + (otherObj.width);
+				var othertop = otherObj.y;
+				var otherbottom = otherObj.y + (otherObj.height);
+				var crash = true;
+			};
 		}
 
 		function updateGameArea(){
 			myGameArea.clear();
+			if(myGameArea.key && myGameArea.key == 37){
+				myBird.speedX =- 1;
+			};
+			if(myGameArea.key && myGameArea.key == 39){
+				myBird.speedX = 1;
+			};
+			if(myGameArea.key && myGameArea.key == 38){
+				myBird.speedY =- 1;
+			};
+			if(myGameArea.key && myGameArea.key == 40){
+				myBird.speedY = 1;
+			};
 			myBird.newPos();
 			myBird.update();
+			myObstacle.update();
 		}
+
+		function startGame(){
+			myBird = new component(30, 30, "red", 10, 120);
+			myObstacle = new component(10, 200, "green", 300, 120);
+			myGameArea.start();
+		};
+
 
 		//controller btn
 		function moveup(){
