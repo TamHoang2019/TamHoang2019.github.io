@@ -1,42 +1,36 @@
-#game1 {
-  width: 100%;
-  height: 100%;
-}
-#game1 .game1{
-  width: 300px;
-  height: 300px;
-  border: 1px solid gray;
-  margin: 0 auto;
-}
-#game1 .image1{
-  background: url('../images/game_brick2.png') no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  /* width: 1000px;
-  height: 487px; */
+main .game{
   position: relative;
-  transition: 0.4s;
+  height: 300px;
 }
-
-#game1 .game1 a.overlay{
-  display: block;
+main .game .image{
+  width: 100%;
+  height: 100%;
+}
+main .game a.overlay{
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top:0;
+  left:0;
+  right:0;
   bottom:0;
-  right: 0;
-  /* background-color: rgba(9,7,13,.2); */
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
 }
-#game1 .game1 a.overlay:hover{
-    background-color: rgba(9,7,13,.2);
-    border:3px solid blue;
+main .game a.overlay:hover{
+  border-radius: 5px;
+  border: 4px solid blue;
 }
-#game1 .game1 i{
-  line-height: 100%;
+main .game i{
   font-size: 50px;
+}
+#game1{
+  background: url('../images/game_brick2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#game2{
+  background: url('../images/Screen Shot flappy bird.png') no-repeat;
+  background-size: 100% 100%;
 }
