@@ -4,10 +4,11 @@
 }
 .control {
   position:relative;
-  top:-92px;
+  top:-120px;
   width: 568px;
   display: grid;
-  grid-gap: 5px;
+  grid-column-gap: 100px;
+  grid-row-gap: 12px;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   cursor: pointer;
@@ -15,7 +16,7 @@
   margin: 0 auto;
 }
 .control button{
-  padding: 10px 10px;
+  padding: 15px 10px;
   background-color: rgba(0, 0, 255, 0.2);
   color: white;
   font-size: 20px;
