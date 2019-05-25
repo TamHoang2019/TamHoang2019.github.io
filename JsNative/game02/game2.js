@@ -5,8 +5,8 @@ var myBird;
 var myObstacles = [];
 
 function startGame(){
-  myBird = new component(30, 30, "../../images/flappy.png", 10, 120, "image");
-  myBackground = new component(820, 320, "../../images/flappy_bg.png", 0, 0 , "background");
+  myBird = new component(40, 30, "../../images/flappy.png", 10, 120, "image");
+  myBackground = new component(1000, 380, "../../images/flappy_bg.png", 0, 0 , "background");
   myScore = new component("40px", "Consolas", "white", 360, 40, "text");
   mySound = new sound("../../sounds/Screen_Door_Close.mp3");
   myMusic = new sound("../../sounds/Splashing_Around.mp3");
@@ -17,8 +17,8 @@ function startGame(){
 var myGameArea = {
   canvas: document.createElement('canvas'),
   start: function(){
-    this.canvas.width = 480;
-    this.canvas.height = 270;
+    this.canvas.width = 568;
+    this.canvas.height = 320;
     this.context = this.canvas.getContext('2d');
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     this.frameNo = 0;
@@ -53,6 +53,9 @@ function component(width, height, color, x, y, type){
   this.update = function(){
     ctx = myGameArea.context;
     if(type == "image" || type == "background"){
+      // this.onload = function(){
+      //   ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+      // }
       ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     } else if(this.type == "text"){
       ctx.font = this.width + "" + this.height;
@@ -104,17 +107,6 @@ function sound(src){
   this.stop = function(){
     this.sound.pause();
   }
-
-
-
-
-  // var playPromise = this.sound.play();
-  // if (playPromise !== null){
-  // 		playPromise.catch(() => { this.sound.play(); })
-  // }
-  // this.stop = function(){
-  // 	this.sound.pause();
-  // }
 }
 
 function updateGameArea(){
@@ -146,23 +138,36 @@ function updateGameArea(){
     myObstacles[i].x -= 1;
     myObstacles[i].update();
   };
-  // myBird.speedX = 0;
-  // myBird.speedY = 0;
-  if(myGameArea.key && myGameArea.key == 37){
-    myBird.speedX -= 1;
-  };
-  if(myGameArea.key && myGameArea.key == 39){
-    myBird.speedX = 1;
-  };
-  if(myGameArea.key && myGameArea.key == 38){
-    myBird.speedY -= 1;
-  };
-  if(myGameArea.key && myGameArea.key == 40){
-    myBird.speedY = 1;
-  };
+  // if(myGameArea.key && myGameArea.key == 37){
+  //   myBird.speedX -= 2;
+  // };
+  // if(myGameArea.key && myGameArea.key == 39){
+  //   myBird.speedX = 2;
+  // };
+  // if(myGameArea.key && myGameArea.key == 38){
+  //   myBird.speedY -= 2;
+  // };
+  // if(myGameArea.key && myGameArea.key == 40){
+  //   myBird.speedY = 2;
+  // };
+
+  // if(myGameArea.key){
+  //   if(myGameArea.key == 37){
+  //     myBird.speedX -= 1;
+  //   } else if(myGameArea.key == 39){
+  //     myBird.speedX = 1;
+  //   } else if(myGameArea.key == 38){
+  //     myBird.speedY -= 1;
+  //   } else if(myGameArea.key == 40){
+  //     myBird.speedY = 1;
+  //   }
+  // };
+  // if(!myGameArea.key){
+  //   clearmove();
+  // }
+
   myBird.newPos();
   myBird.update();
-  clearmove();
   myScore.text = "SCORE: " + myGameArea.frameNo;
   myScore.update();
 }
@@ -173,19 +178,6 @@ function everyinterval(n){
   };
   return false;
 }
-//controller btn
-// function moveup(){
-// 	myBird.speedY -= 1;
-// }
-// function movedown(){
-// 	myBird.speedY += 1;
-// }
-// function moveleft(){
-// 	myBird.speedX -= 1;
-// }
-// function moveright(){
-// 	myBird.speedX += 1;
-// }
 
 function clearmove(){
   myBird.image.src = "../../images/flappy.png";
@@ -195,8 +187,8 @@ function clearmove(){
 //change image
 function move(dir){
   myBird.image.src = "../../images/angry.jpg";
-  if(dir == "up"){ myBird.speedY -= 1;}
-  if(dir == "down"){ myBird.speedY += 1;}
-  if(dir == "left"){ myBird.speedX -= 1;}
-  if(dir == "right"){ myBird.speedX += 1;}
+  if(dir == "up"){ myBird.speedY -= 2;}
+  if(dir == "down"){ myBird.speedY += 2;}
+  if(dir == "left"){ myBird.speedX -= 2;}
+  if(dir == "right"){ myBird.speedX += 2;}
 }
