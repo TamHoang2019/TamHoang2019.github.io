@@ -18,17 +18,17 @@
 </head>
 <body onload="startGame()">
 	<div class="control">
-		<button onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">
-			<span class="fa fa-angle-double-up"></span>
-		</button>
 		<button class="left" onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">
 				<span class="fa fa-angle-double-left"></span>
 		</button>
-		<button onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">
+		<button class="right" onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">
+				<span class="fa fa-angle-double-right"></span>
+		</button>
+		<button class="down" onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">
 				<span class="fa fa-angle-double-down"></span>
 		</button>
-		<button onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">
-				<span class="fa fa-angle-double-right"></span>
+		<button class="up" onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">
+			<span class="fa fa-angle-double-up"></span>
 		</button>
 	</div>
 	<div class="row">

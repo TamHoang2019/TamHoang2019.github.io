@@ -5,8 +5,8 @@ var myBird;
 var myObstacles = [];
 
 function startGame(){
-  myBird = new component(40, 30, "../../images/flappy.png", 10, 120, "image");
-  myBackground = new component(1000, 380, "../../images/flappy_bg.png", 0, 0 , "background");
+  myBird = new component(30, 25, "../../images/flappy.png", 10, 120, "image");
+  myBackground = new component(1136, 320, "../../images/flappy_bg4.png", 0, 0 , "background");
   myScore = new component("40px", "Consolas", "white", 360, 40, "text");
   mySound = new sound("../../sounds/Screen_Door_Close.mp3");
   myMusic = new sound("../../sounds/Splashing_Around.mp3");
@@ -69,9 +69,19 @@ function component(width, height, color, x, y, type){
   this.newPos = function(){
     this.x += this.speedX;
     this.y += this.speedY;
+    if(this.x >= 568) {
+      this.x = 568-this.width;
+    } else if(this.x < 0) {
+      this.x = 0;
+    }
+    if(this.y >= 320){
+      this.y = 320 - this.height;
+    } else if (this.y < 0) {
+      this.y = 0;
+    }
     if(this.type == "background"){
       this.x -= 1;
-      if(this.x == -(this.width/2.5)){
+      if(this.x == -(this.width/2)){
         this.x = 0;
       };
     };
@@ -138,18 +148,22 @@ function updateGameArea(){
     myObstacles[i].x -= 1;
     myObstacles[i].update();
   };
-  // if(myGameArea.key && myGameArea.key == 37){
-  //   myBird.speedX -= 2;
-  // };
-  // if(myGameArea.key && myGameArea.key == 39){
-  //   myBird.speedX = 2;
-  // };
-  // if(myGameArea.key && myGameArea.key == 38){
-  //   myBird.speedY -= 2;
-  // };
-  // if(myGameArea.key && myGameArea.key == 40){
-  //   myBird.speedY = 2;
-  // };
+  // myBird.newPos();
+  // myBird.update();
+  // myBird.speedX = 0;
+  // myBird.speedY = 0;
+  if(myGameArea.key && myGameArea.key == 37){
+    myBird.speedX -= 2;
+  };
+  if(myGameArea.key && myGameArea.key == 39){
+    myBird.speedX = 2;
+  };
+  if(myGameArea.key && myGameArea.key == 38){
+    myBird.speedY -= 2;
+  };
+  if(myGameArea.key && myGameArea.key == 40){
+    myBird.speedY = 2;
+  };
 
   // if(myGameArea.key){
   //   if(myGameArea.key == 37){

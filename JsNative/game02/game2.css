@@ -16,18 +16,41 @@
   margin: 0 auto;
 }
 .control button{
-  padding: 20px 10px;
+  padding: 5px;
   background-color: rgba(0, 0, 255, 0.0);
-  color: white;
-  font-size: 20px;
+  color: #d67158;
+  font-size: 30px;
   font-weight: 700;
   display: block;
   border: none;
   box-sizing: border-box;
 }
-.control button:first-child{
-  grid-column: 2/3;
+
+button.up {
+    grid-column: 5/6;
 }
-.control button.left{
+
+button.right {
+    grid-column: 5/6;
+}
+button.left{
   grid-column: 1/2;
+}
+
+@media (min-width: 568px){
+  .control{top: -91px;width: 236px;right: -166px;}
+  button.up{
+    grid-column: 3/4;
+    color: white;
+  }
+  button.down{
+    grid-column: 2/3;
+    color: white;
+  }
+  button.left{
+    grid-column: 2/3;
+  }
+  button.right{
+    grid-column: 3/4;
+  }
 }
