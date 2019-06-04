@@ -78,3 +78,47 @@ p{
   float: left;
   margin-right: 10px;
 }
+.menuTop{
+  width: 662px;
+  margin: auto;
+  background-color: #fff;
+  margin-bottom: 15px;
+  color: #fd7222;
+}
+.menuTop h2{
+  display: inline-block;
+  font: 400 20px 'Roboto Slab', sans-serif;
+}
+.menuTop .menu{
+  display: inline-block;
+  list-style-type: none;
+}
+.menuTop .menu li, .menuTop .menu li a{
+  display: inline-block;
+}
+.menuTop .menu li a{
+  font-size: 12px;
+}
+.menuTop .menu li a:hover{
+  color: #111;
+}
+.menuTop .menu li a.active{
+  color: #fd7222;
+}
+.menuTop .menu li a.active i{
+  margin-right:8px;
+  color: #111;
+  font-size: 15px;
+}
+.menuTop .menu li::before{
+  content: "|";
+  padding: 0 8px;
+  color: gray;
+  font-size: 10px;
+}
+.menuTop .menu li:first-child{
+  padding-left:0;
+}
+.menuTop .menu li:first-child::before{
+  content: "";
+}
