@@ -1,0 +1,151 @@
+*{margin:0; padding:0;}
+
+i.fa.fa-video-camera {
+    color: #aaa;
+}
+
+.tieudeBaiviet i {
+    font-size: 13px;
+}
+
+.baiviet p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.baiviet {
+    width: 280px;
+}
+
+img.imgLeft {
+    width: 140px;
+    max-height: 85px;
+}
+
+._1tin {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed gray;
+}
+._1tin:last-child{
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.right {
+    width: 435px;
+}
+a{text-decoration:none;}
+
+.tieudeBaiviet a {
+    color: #111;
+    font-weight: bold;
+    font-size: 15px;
+}
+.tieudeBaiviet a:hover{
+  color:#ed008c;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+span.icon {
+    color: #650c8f;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.container{
+  width: 660px;
+  margin: auto;
+}
+.menuTop{
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  background-image: url(8.png);
+  background-position: bottom;
+  background-repeat-y: no-repeat;
+}
+.menuTop h3, .menuTop ul{
+  display: inline-block;
+}
+.menuTop img{
+  margin-right: 5px;
+}
+.menuTop h3 span{
+  color: #650c8f;
+  font: 400 22px/35px 'Roboto Slab', serif;
+}
+.menuTop h3{
+  color: #ed008c;
+  font: 400 22px/35px 'Roboto Slab', serif;
+  width: 130px;
+}
+.menuTop ul{
+  list-style-type: none;
+}
+.menuTop ul li{
+  display: inline-block;
+}
+.menuTop ul li:after{
+  content:"|";
+  color: #aaa;
+  font-size: 12px;
+}
+.menuTop ul li:last-child:after{
+  content:"";
+}
+.menuTop ul li a{
+  color: #aaa;
+  font-size: 12px;
+  display: inline-block;
+  padding:0 8px;
+}
+
+.content{
+  background-color: #f1e3eb;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2px;
+}
+.content .left{
+  width: calc(100% - 450px);
+  position:relative;
+  height: 315px;
+}
+.left img{
+  width: 100%;
+}
+.left .layer2{
+  font-size: 14px;
+  display: inline-block;
+  padding: 5px;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.left .overlay{
+  position: absolute;
+  width: 198px;
+  height: 60px;
+  left:0;
+  bottom:0;
+  z-index:3;
+  background-color:rgba(0, 0, 0, 0.4);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.left a.tieude{
+  color: #00cccc;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 6px;
+  display: inline-block;
+}
+.overlay:hover a.tieude{
+  color:#ed008c;
+}

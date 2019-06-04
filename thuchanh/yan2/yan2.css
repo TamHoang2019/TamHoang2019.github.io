@@ -1,0 +1,76 @@
+*{margin:0; padding:0;}
+a{text-decoration:none;}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  width: 665px;
+  margin: auto;
+}
+.topContent{
+  margin-bottom: 15px;
+}
+.topContent img{
+  width: 100%;
+  height: 335px;
+}
+.topContent .baiviet{
+  background-color: #d33;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 10px 0;
+}
+.topContent a.tieude {
+  display: block;
+  color: #111;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.topContent a.tieude:hover, ._1content a.title:hover{
+  color: #d33;
+}
+.smallContent{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+._1content{
+  width: calc(100%/3 - 20px);
+  margin-bottom: 15px;
+}
+._1content img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+._1content a.title{
+  color: #111;
+  font-size: 17px;
+}
+.info{
+  color: #d33;
+  font-size: 13px;
+}
+.info .share{
+  color: #aaa;
+}
+
+/* responsive
+ */
+ @media (max-width: 690px){
+  html, body, .container{
+    width: 100%;
+  }
+  .topContent img{
+    height: auto;
+  }
+  .smallContent{
+    flex-direction: column;
+  }
+  ._1content{
+    width: 100%;
+  }
+ }
