@@ -1,0 +1,127 @@
+*{margin:0; padding:0}
+
+a.tieudetinnho {
+    color: #111;
+    font-weight: bold;
+}
+
+._1tin img {
+    border-radius: 4px;
+}
+
+._1tin {
+    width: 270px;
+}
+
+.ndtinto p {
+    font-size: 12px;
+}
+
+.date {
+    color: #888;
+    font-size: 12px;
+    margin: 10px 0;
+}
+body{font-family: 'Roboto', sans-serif;line-height: 21px;}
+a{text-decoration:none;}
+.container{
+  width: 880px;
+  height: 560px;
+  background-image: url(1.jpg);
+  background-repeat-y: no-repeat;
+  background-position: bottom;
+  margin:20px auto;
+  display: flex;
+}
+
+h2.toptieude{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.toptieude a{
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 20px;
+  line-height: 20px;
+  background-color: #fff;
+  color: #111;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  top: -8px;
+}
+
+.left{
+  width: 560px;
+  margin-right: 22px;
+  background-image: url(1.jpg);
+  background-repeat-y: no-repeat;
+  background-position: top;
+}
+.tinto{
+  width: 100%;
+  display: flex;
+}
+.tinto img{
+  width: 322px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+.tinto a{
+  color: #111;
+  font-size: 19px;
+  font-weight: bold;
+}
+._2tinnho{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.right{
+  width:  calc(100% - 560px - 22px);
+  height: calc(100% - 23px);
+  border: 1px solid rgb(209, 209, 209);
+  border-top: none;
+  background-image: url(1.jpg);
+  background-repeat-y: no-repeat;
+  background-position: top;
+  
+}
+.right h2.toptieude a{
+  margin-left: 15px;
+  cursor: default;
+}
+.right ul.docnhieu{
+  width: 100%;
+  list-style-type: none;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.right ul.docnhieu li{
+  border-bottom: 1px dotted gray;
+
+  margin: 0 15px;
+  padding: 20px 0;
+}
+.right ul.docnhieu li:first-child{
+  padding-top:0;
+}
+.right ul.docnhieu li a{
+  color: #111;
+  font-size:14px;
+  font-weight: bold;
+  display: block;
+}
+.right ul.docnhieu li a::before{
+  content: "\00a0";
+  width: 15px;
+  height: 50px;
+  background-image: url(sprite.png);
+  background-position: -277px -207px;
+  padding-left: 5px;
+  position: relative;
+  top: 7px;
+  display: block;
+  float: left;
+}

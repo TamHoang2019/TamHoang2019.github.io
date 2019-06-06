@@ -1,0 +1,38 @@
+*{margin:0; padding:0;}
+a{text-decoration: none;}
+body{
+  font-family: 'Arial', sans-serif;
+}
+#dantri2{
+  width: 620px;
+  margin: 20px auto;
+  display:flex;
+  padding: 20px 0;
+  background-color: rgba(255,255,255,0.3);
+}
+._1tin{
+  width: 33.33%;
+}
+._1tin img.left{
+  width: 92px;
+  height: 82px;
+  border: 4px solid #ddd;
+  margin-right: 6px;
+  float: left;
+}
+._1tin a.right{
+  color: #004175;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  line-height: 20px;
+  overflow: hidden;
+
+  margin-right: 8px;
+}
+i.tinanh{
+  width: 10px;
+  height: 8px;
+  background-image: url(4.png);
+}

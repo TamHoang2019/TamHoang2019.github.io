@@ -1,0 +1,143 @@
+*{margin:0; padding:0;}
+a{text-decoration: none; 
+  color: #ccc;
+  }
+body{
+  font-family: 'Helvetica Neue', sans-serif;
+}
+#marry{
+  width: 800px;
+  margin: 20px auto;
+}
+.congcu{
+  text-align: center;
+}
+.congcu h2{
+  font-size: 26px;
+  font-weight: 400;
+  color: #58595b;
+}
+.congcu .menucongcu{
+  display: flex;
+  justify-content: space-around;
+  margin: 15px auto;
+}
+.congcu .menucongcu a{
+  display: block;
+  font-size: 12px;
+}
+.menucongcu span{
+  display: block;
+  font-family: marryv3;
+  font-size: 33px;
+  font-weight: 300;
+  color: #ec3d79;
+  margin-bottom: 10px;
+}
+.congcu .checklist span:before {
+  content: "\69";
+}
+.congcu .ngansach span:before {
+  content: "\68";
+}
+.congcu .khachmoi span:before {
+  content: "\66";
+}
+.congcu .ytuong span:before {
+  content: "\67";
+}
+.congcu .review span:before {
+  content: "\e039";
+}
+.congcu .menucongcu a:hover span{
+  color: #999;
+}
+
+.album{
+  display: flex;
+}
+.album .ytuongcuoi, .album .aocuoidep{
+  width: 391px;
+  height: 287px;
+  overflow: hidden;
+  position: relative;
+}
+.album img{
+  width: 100%;
+  height: 100%;
+}
+.album .ytuongcuoi{
+  margin-right: 15px;
+}
+.overlay, .overlaywhite{
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+}
+.overlaywhite{
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+}
+.chung:hover .overlay{
+  opacity: 1;
+}
+._1tin:hover .overlaywhite{
+  opacity: 1;
+}
+._1tin:hover p{
+  color: #fff;
+}
+.layer3{
+  transition: 0.4s;
+  position: absolute;
+  top: 300px;
+}
+.album .chung:hover .layer3{
+  top: 50px;
+  transition: 0.4s;
+}
+.album .chung:hover h2{
+  top: 16px;
+  left: 108px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  transition: 0.4s;
+}
+.album h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+  transition: 0.4s;
+}
+._1tin{
+  display: flex;
+  margin: 10px;
+  /* transition: 0.4s; */
+}
+._1tin .image{
+  position: relative;
+  width: 140px;
+  height: 100px;
+  /* transition: 0.4s; */
+}
+.album ._1tin img{
+  width: 140px;
+  height: 100px;
+}
+._1tin p{
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  /* transition: 0.4s; */
+}

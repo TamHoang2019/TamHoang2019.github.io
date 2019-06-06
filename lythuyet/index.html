@@ -35,8 +35,10 @@
 							<li class="nav-item title">Load font</li>
 								<li class="nav-item"><a href="#font-local" class="nav-link"><i class="fa fa-arrow-right"></i>Font local</a></li>
 								<li class="nav-item"><a href="#font-google" class="nav-link"><i class="fa fa-arrow-right"></i>Font Google</a></li>
+								<li class="nav-item"><a href="#fontawesome" class="nav-link"><i class="fa fa-arrow-right"></i>Font Awesome</a></li>
 							<li class="nav-item title">Cách khắc phục</li>
 								<li class="nav-item"><a href="#kp-01" class="nav-link"><i class="fa fa-arrow-right"></i>Khi dùng float bị tràn che mất margin.</a></li>
+								<li class="nav-item"><a href="#kp-02" class="nav-link"><i class="fa fa-arrow-right"></i>Khi transition không hoạt động.</a></li>
 								<li class="nav-item"><a href="#font-google" class="nav-link"><i class="fa fa-arrow-right"></i>...</a></li>
 						</ul>
 						<!-- end danh muc -->
@@ -113,7 +115,55 @@
 					</div>
 					<!-- end font-google -->
 
-
+					<!-- begin fontawsome	 -->
+				<div id="fontawesome">
+					<!-- begin title	 -->
+					<div class="row">
+						<div class="titleTop text-center col">
+							<h1 class="display-5">Fontawesome</h1>
+							<p class="lead">Là tạo icon cho website không cần hình ảnh, mà dùng fontawesome, sử dụng giống như là font bình thường, nghĩa là có thể đổi màu sắc, kích thước, vị trí... của icon một cách dễ dàng.</p>
+						</div>
+					</div>
+					<!-- end title -->
+					<div class="row">
+						<div class="col">
+							<p>
+								- Bước 1: vào trang <code>fontawesome.com</code>	. <br/>
+								- Bước 2: Download và giải nén, lấy folder fonts, và file css font-awesome.css bỏ vào folder website của mình, folder <code>fonts</code> đặt ngang cấp với file index.html. <br/>
+								- Bước 3: Trong file <code>index.html</code> trong thẻ head khai báo sử dụng fontawesome như sau: 
+								<br/>
+								<code>
+										&lt;link rel="stylesheet" href="css/font-awesome.min.css"&gt;
+								</code>
+								<h4>Có 2 cách dùng fontawesome</h4> 
+								<b>1. Dùng trực tiếp trong file .html</b>
+								<br />
+										Dùng bất kỳ tên thẻ nào cũng được, kèm theo 2 class .fa.fa-tên-của-icon-do-fontawesome-đặt. 
+										<br />
+								ví dụ 
+								<code>
+									&lt;div class="fa fa-heart"&gt;
+								</code>
+								<br />
+								Khi ra trình duyệt sẽ thấy kết quả là hình trái tim. 
+								<br /> <u>Chú ý:</u>	 fa fa- là quy định của fontawesome. Tuỳ theo phiên bản sẽ có khác biệt, nên vào từng icon xem hướng dẫn. Còn phiên bản 4 thì quy tắc chung là .fa.fa- là được. 
+								<br />
+								<b>2. Dùng gián tiếp trong file .css thông qua pseudo-element ::before, hoặc ::after. </b>
+								Khi này, chúng ta phải tìm được mã code của icon cần dùng, để paste vào thuộc tính content của pseudo-element đó. <br />
+								ví dụ <br />
+								<code>
+									li::before{ <br />
+										content:"\f0c8"; <br />
+										font-family: FontAwesome; //đối với fontawesome phiên bản 4. <br />
+										font-family: "Font Awesome 5 Free";; //đối với fontawesome phiên bản 5.
+									}
+								</code>
+							</p>
+						</div>
+						<!-- het noidung -->
+					</div>
+				</div>
+				<!-- end fontawesome -->
 
 					<hr>
 				<!-- begin khacphuc 01	 -->
@@ -122,33 +172,60 @@
 						<div class="row">
 							<div class="titleTop text-center col">
 								<h1 class="display-5">Overflow</h1>
-								<p class="lead">Là các font được lấy link trực tiếp từ google, không cần tải về máy tính.</p>
+								<p class="lead">Là thuộc tính giúp chúng ta quy định cách xử lý phần nội dung bị dư ra khỏi width và height của thẻ chứa nó.</p>
 							</div>
 						</div>
 						<!-- end title -->
 						<div class="row">
-							<p>
-								- Bước 1: vào trang <code>fonts.google.com</code>	. <br/>
-								- Bước 2: Chọn một hoặc nhiều font ưa thích  <br/>
-								- Bước 3: Copy đường link, rồi paste vào file .html, ví dụ  <br/>
-								<code>
-										&lt;link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"&gt;
-								</code><br/>
-								- Bước 4: Mỗi khi cần sử dụng font này cho một thẻ nào đó trong file .css, thì gọi tên font như sau <br/>
-								<code>
-									h1{
-										font-family: tên-font-do-google-đặt;
-									}
-								</code> <br />
-								ví dụ <br />
-								<code>
-										font-family: 'Lato', sans-serif; <br />
-										font-family: 'Roboto', sans-serif;
-								</code>
-							</p>
+							<div class="">
+								<h6>Vấn đề:</h6>
+								<p>
+									Thường khi chúng ta float left hoặc right cho một thẻ nào đó, thì nội dung của thẻ bên cạnh sẽ tràn qua phần còn trống của thẻ đó. 
+								</p>
+								<p>
+									Để khắc phục, muốn xếp gọn gàng 2 bên nội dung không lấn chiếm lẫn nhau, ta dùng thuộc tính overflow:hidden; <br />
+									<code>
+											.right{<br />
+												overflow: hidden;<br />
+											}<br />
+									</code>
+								</p>
 						</div>
 					</div>
 					<!-- end khacphuc01 -->
+
+					<hr>
+					<!-- begin khacphuc 02	 -->
+					<div id="kp-02">
+							<!-- begin title	 -->
+							<div class="row">
+								<div class="titleTop text-center col">
+									<h1 class="display-5">Transition</h1>
+									<p class="lead">Là thuộc tính quản lý thời gian thực hiện chuyển động.</p>
+								</div>
+							</div>
+							<!-- end title -->
+							<div class="row">
+								<p>
+									- Nếu transition không hoạt động, nghĩa là bạn đã thiếu định nghĩa ra một thuộc tính css tạo ra hiệu ứng. (Ví dụ hiệu ứng di chuyển lên xuống, trái phải, ẩn, hiện...) <br />
+									- Ví dụ:  <br />
+									Bạn muốn transition cho thẻ a, dịch chuyển vị trí top xuống 50px, là 0.4s. <br />
+									<code>	a:hover { <br />
+										top: 50px; <br />
+										transition: 0.4s; <br />
+									} <br /></code>
+								
+									Nhưng nếu ban đầu, bạn không định nghĩa vị trí top cho thẻ a, thì khi transition nó sẽ ko thực hiện. <br />
+									Nghĩa là bắt buộc phải có luôn css như sau:  <br />
+									<code>	a{ <br />
+										top:0; <br />
+									} <br /></code>
+								
+									Lúc này, trình duyệt mới hiểu là bạn muốn thay đổi từ top là 0 đến 50px trong thời gian 0.4s
+								</p>
+							</div>
+						</div>
+						<!-- end khacphuc01 -->
 //font awsome : install, color, size, hover, transition
 //dich chuyen vi tri, combo thuộc tính position relative 
 //tạo khối: ảnh, chữ width, height... 
