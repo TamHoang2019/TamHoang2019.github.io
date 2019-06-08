@@ -36,9 +36,15 @@
 								<li class="nav-item"><a href="#font-local" class="nav-link"><i class="fa fa-arrow-right"></i>Font local</a></li>
 								<li class="nav-item"><a href="#font-google" class="nav-link"><i class="fa fa-arrow-right"></i>Font Google</a></li>
 								<li class="nav-item"><a href="#fontawesome" class="nav-link"><i class="fa fa-arrow-right"></i>Font Awesome</a></li>
+							<li class="nav-item title">Mẹo</li>
+								<li class="nav-item"><a href="#meo-01" class="nav-link"><i class="fa fa-arrow-right"></i>Tạo sao rating cực kỳ đơn giản bằng css.</a></li>
+								<li class="nav-item"><a href="#meo-02" class="nav-link"><i class="fa fa-arrow-right"></i>Cách tạo trim text (...) cho đoạn văn dài, hiện được trên nhiều dòng.</a></li>
+								<li class="nav-item"><a href="#meo-03" class="nav-link"><i class="fa fa-arrow-right"></i>Tạo background hình mũi tên.</a></li>
+								<li class="nav-item"><a href="#meo-03" class="nav-link"><i class="fa fa-arrow-right"></i>Tạo background trộn màu rất đẹp bằng css.</a></li>
 							<li class="nav-item title">Cách khắc phục</li>
 								<li class="nav-item"><a href="#kp-01" class="nav-link"><i class="fa fa-arrow-right"></i>Khi dùng float bị tràn che mất margin.</a></li>
 								<li class="nav-item"><a href="#kp-02" class="nav-link"><i class="fa fa-arrow-right"></i>Khi transition không hoạt động.</a></li>
+								<li class="nav-item"><a href="#kp-03" class="nav-link"><i class="fa fa-arrow-right"></i>Khi pseudo element không có tác dụng.</a></li>
 								<li class="nav-item"><a href="#font-google" class="nav-link"><i class="fa fa-arrow-right"></i>...</a></li>
 						</ul>
 						<!-- end danh muc -->
@@ -164,8 +170,106 @@
 					</div>
 				</div>
 				<!-- end fontawesome -->
-
 					<hr>
+				<!-- begin meo-01	 -->
+				<div id="meo-01">
+					<!-- begin title	 -->
+					<div class="row">
+						<div class="titleTop text-center col">
+							<h1 class="display-5">Star rating</h1>
+							<p class="lead"><img src="1.png" alt=""></p>
+						</div>
+					</div>
+					<!-- end title -->
+					<div class="row">
+						<div class="col">
+							<h4>Vấn đề: </h4>
+							<p>
+								Đối với ngôi sao màu vàng bình thường, thì chúng ta dùng font awesome là có thể chèn vào 1 cách dễ dàng. Tuy nhiên, đối với ngôi sao có màu vàng 1/2 thì sao? Chưa kể, lại còn ngôi sao mà màu vàng chỉ chiếm 2/5, hoặc 3/4...Để tương ứng với số điểm đánh giá của ngừoi dùng, ví dụ như là: 4.3, 4.5, 4.8... thì làm thế nào?
+							</p>
+							<h4>Dưới đây là giải pháp:</h4>
+							<p>Ý tưởng cũng rất đơn giản, ngoài ngôi sao màu vàng là nền nằm dưới, ta sẽ tạo ra 1 ngôi sao màu xám nhạt, mà mỗi khi tăng giảm độ rộng của nó, sẽ làm cho phần màu vàng của ngôi sao chính được mở rộng hoặc thu hẹp lại.</p>
+							<p>
+								Để đơn giản, bài này chỉ sử dụng 4 mức thể hiện màu xám nhạt cho ngôi sao bao gồm: 0 - 4 - 5 - 6; 
+							</p>
+							<p>
+								Tương ứng là: xám hoàn toàn - xám chiếm 3/4 - xám chiếm một nửa - xám chiếm 2/5.
+							</p>
+							<u>Phần html</u>
+							<p>Từng ngôi sao sẽ nằm trong 1 div.sao</p>
+							<code>
+									&lt;div class="sao"&gt;&lt;/div&gt;
+							</code>
+							<p>Trong div.sao này sẽ tạo 2 element, trong đó:</p>
+							<p>- Một element là ngôi sao màu vàng, sử dụng font awesome để hiện ra ngôi sao, có màu là màu vàng.</p>
+							<p>- Một element là ngôi sao màu xám nhạt không thể hiện trên html, mà là element ảo pseudo-element của element ngôi sao màu vàng ở trên, được tạo ra bằng css. </p>
+							<code>
+									&lt;div class="sao"&gt;&lt;i class="fa fa-star"&gt;&lt;/i&gt;&lt;/div&gt;
+							</code>
+							<p>Ngôi sao ảo sẽ có màu xám nhạt, sẽ di chuyển đè lên ngôi sao màu vàng nằm dưới, để biểu hiện cho số điểm tương ứng trong dãy điểm từ 4.0 đến 5.0</p>
+							<p>Vậy ta sẽ thêm class tương ứng cho ngôi sao nào có ngôi sao ảo như sau: </p>
+						
+							<p>
+								_0: nghĩa là ngôi sao này màu xám hoàn toàn. ví dụ: 4 trên 5 sao. 
+							</p>
+							<p>
+								_4: nghĩa là ngôi sao này màu xám bên phải nhiều hơn, tương ứng cho trường hợp từ 4.1 đến 4.4							</p>
+							<p>
+								_5: nghĩa là ngôi sao này màu xám chiếm 1 nửa, tương ứng cho trường hợp điểm là 4.5						</p>
+							<p>
+								_6: nghĩa là ngôi sao này màu xám chiếm 1 nửa , tương ứng cho trường hợp điểm là 4.5						</p>
+								<code>
+										&lt;div class="sao"&gt;&lt;i class="fa fa-star _0"&gt;&lt;/i&gt;&lt;/div&gt;
+								</code> <br>
+								<code>
+										&lt;div class="sao"&gt;&lt;i class="fa fa-star _4"&gt;&lt;/i&gt;&lt;/div&gt;
+								</code><br>
+								<code>
+										&lt;div class="sao"&gt;&lt;i class="fa fa-star _5"&gt;&lt;/i&gt;&lt;/div&gt;
+								</code><br>
+								<code>
+										&lt;div class="sao"&gt;&lt;i class="fa fa-star _6"&gt;&lt;/i&gt;&lt;/div&gt;
+								</code><br>
+								<p>
+									<u>Phần CSS</u>
+								</p>
+								<p>
+									Đối với div.sao ta cho thuộc tính position:relative; để điều khiển vị trí xuất hiện của ngôi sao xám. 
+								</p>
+								<p>
+									Đối với element ngôi sao màu vàng ta chỉ cần cho thuộc tính color là màu vàng.
+								</p>
+								<p>
+									<u>Tạo element ảo cho ngôi sao màu vàng như sau: </u>
+								</p>
+								<p>
+										<code>
+												.sao i_5::after{} <br>
+												hoặc <br>
+												.sao i_5::before{}
+										</code>
+								</p>
+								<p>
+									after hay before đều được, vì div.sao cha đã được position:relative thì cho hiện trước hay sau đều phải dùng thuộc tính left, hoặc right để chỉnh cho ngôi sao ảo này nằm đè lên ngôi sao chính.
+								</p>
+								<p>
+										<code>
+										.sao i._5:after{ //dấu : hay dấu :: khi tạo element ảo là như nhau. <br>
+											content: "\f005"; //đây là mã của ngôi sao trong fontawesome<br>
+											color: #dedfe0; //màu xám nhạt<br>
+											position: absolute; //tách ngôi sao ra khỏi nền hiện tại, thay đổi vị trí của nó so với div.sao<br>
+											right: 0px; //ngoi sao màu xám nằm sát bên phải div.sao<br>
+											width: 6px; //đây là độ rộng chiếm 1 nửa ngôi sao màu vàng, tăng lên là chiếm nhiều hơn, giảm xuống thì chiếm ít hơn.<br>
+											overflow: hidden; //những nội dung của ngôi sao xám nằm ngoài chính độ rộng của nó thì ẩn hết đi <br>
+											transform: rotateY(180deg); //quay theo trục thẳng đứng 180 độ để ngôi sao xám đè từ bên phải qua<br>
+										}
+										</code>
+								</p>
+						</div>
+				</div>
+				<!-- end meo-01 -->
+
+				<hr>
 				<!-- begin khacphuc 01	 -->
 				<div id="kp-01">
 						<!-- begin title	 -->
@@ -225,7 +329,28 @@
 								</p>
 							</div>
 						</div>
-						<!-- end khacphuc01 -->
+						<!-- end khacphuc02 -->
+					<hr>
+					<!-- begin khacphuc 03	 -->
+					<div id="kp-03">
+							<!-- begin title	 -->
+							<div class="row">
+								<div class="titleTop text-center col">
+									<h1 class="display-5">Pseudo element</h1>
+									<p class="lead">Là khi html không hiển thị element ảo, width và height của nó vẫn bằng 0.</p>
+								</div>
+							</div>
+							<!-- end title -->
+							<div class="row">
+								<div class="col">
+									<h4>Nguyên nhân:</h4>
+									<p>1. Thiếu thuộc tính <code>display:block</code> , hoặc <code>inline-block</code> .</p>
+									<p>2. Hoặc thiếu thuộc tính <code>content:''</code> .</p>
+									<p>Phải có thuộc tính này thì trình duyệt mới tính ra chiều rộng của element ảo.</p>
+								</div>
+							</div>
+						</div>
+						<!-- end khacphuc02 -->
 //font awsome : install, color, size, hover, transition
 //dich chuyen vi tri, combo thuộc tính position relative 
 //tạo khối: ảnh, chữ width, height... 
