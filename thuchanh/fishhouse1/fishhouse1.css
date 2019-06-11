@@ -1,0 +1,142 @@
+*{
+  margin: 0; padding:0;
+}
+html, body{
+  width: 100%;
+  height: calc(100% - 20px);
+  font-family: 'Quicksand', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+ul{list-style-type: none;}
+#fishhouse1{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+#fishhouse1 img.layer1{
+  width: 100%;
+  height: 100%;  
+  /* transition: 4s; */
+  animation: zoomlen 10s forwards;
+}
+/* #fishhouse1:hover img.layer1{
+  transform: scale(2);
+} */
+@keyframes zoomlen {
+  from {transform: scale(1);}
+  to {transform: scale(2);}
+}
+.layer2{
+  width: 1000px;
+  height: 100%;;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+}
+.layer2 .header{
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.header .logo{
+  width: 180px;
+  height: 70px;
+  margin-top: 20px;
+  float: left;
+}
+.header .logo img{
+  width: 100%;
+  height: 100%;
+}
+.header ul.menu{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 70px;
+}
+.header .menu li{
+  display: inline-block;
+  position: relative;
+}
+.header .menu li a{
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+/* .header .menu li a.active{
+  border-bottom: 2px solid #fff;
+} */
+.header .menu li a span:before{
+  content:'';
+  display: inline-block;
+  height: 2px;
+  background-color: #fff;
+}
+.header .menu li a:hover{
+  background-color: #da5d5d;
+}
+.header .menu li:hover .menu2{
+  opacity: 1;
+}
+.header .menu2{
+  position: absolute;
+  top: 55px;
+  opacity: 0;
+}
+.header .menu2 li a{
+  display: block;
+}
+.header .right{
+  position: relative;
+
+}
+.header .right a.bookonline{
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #da5d5d;
+  padding: 10px 20px;
+  padding-top: 20px;
+  display: inline-block;
+  position: absolute;
+  top: -10px; right: 0;
+  transition: 0.4s;
+}
+.header .right a.bookonline:hover{
+  top: 0;
+  transition: 0.6s;
+
+}
+.layer2 .content{
+  color: #fff;
+  height: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.6rem;
+  opacity: 0;
+  animation: divao 2s forwards;
+  animation-delay: 1s;
+  position: relative;
+}
+@keyframes divao {
+  from {top: -20%; opacity: 0;}
+  to {top: 0; opacity: 1;}
+}
+.layer2 .content h2{
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 70px;
+}
+.layer2 .content p{
+  font-size: 20px;
+}

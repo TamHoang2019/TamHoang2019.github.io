@@ -1,0 +1,164 @@
+*{margin:0; padding:0;
+  box-sizing: border-box;}
+
+a{text-decoration: none; 
+  color: #222;
+  }
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+}
+#youtube1{
+  width: 1080px;
+  margin: 20px auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.chanel{
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.chanel .left a{
+  display: flex;
+  align-items: center;
+  float: left;
+}
+.chanel .left img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.chanel .left span{
+  color: #999;
+  font-size: 13px;
+  padding-left: 10px;
+}
+.chanel .right{
+  float: right;
+}
+.chanel a.subcribe{
+  padding: 12px 20px;
+  background-color: #da0808;
+  text-transform: uppercase;
+  color: #ddd;
+  font-size: 15px;
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 20px;
+}
+.chanel .right i{
+  font-size: 20px;
+  color: #ddd;
+  font-weight: 100;
+}
+.items{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+._1item{
+  width: 210px;
+  /* margin-right: 5px; */
+}
+._1item:last-child{
+  margin-right: 0;
+}
+._1item img{
+  width: 210px;
+  height: 117.5px;
+}
+._1item .tren{
+  position: relative;
+  display: block;
+}
+.tren .time{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 3px 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 2px;
+  z-index: 2;
+}
+.tren .phim{
+  z-index: 3;
+  position: absolute;
+  top: 0; left: 0; right: 0;bottom:0;
+  opacity: 0;
+}
+.tren .clock{
+  z-index: 4;
+  padding: 3px 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 19px;
+  font-weight: 300;
+  color: #ddd;
+  border-radius: 2px;
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+._1item:hover .phim{
+  opacity: 1;
+}
+._1item:hover .clock{
+  opacity: 1;
+}
+
+._1item .duoi{
+  width: 100%;
+  position: relative;
+  margin-top: 15px;
+  padding-right: 20px;
+}
+.duoi a{
+  color: #999;
+  line-height: 18px;
+}
+.duoi a.tenphim{
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: block;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.duoi a.faptv, .duoi a.views{
+  display: block;
+}
+.duoi .more{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right:0;
+  opacity: 0;
+}
+.more i{
+  font-size: 5px;
+  color: #999;
+  padding-bottom: 2px;
+}
+.more:hover i{
+  color: #666;
+}
+._1item:hover .more{
+  opacity: 1;
+}

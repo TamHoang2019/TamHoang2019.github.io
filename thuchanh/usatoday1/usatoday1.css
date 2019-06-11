@@ -1,0 +1,134 @@
+*{margin:0; padding:0;
+  box-sizing: border-box;}
+
+a{text-decoration: none; 
+  color: #222;
+  }
+body{
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+}
+#usatoday1{
+  width: 960px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  padding: 0 22px;
+  border: 1px solid gray;
+}
+.tieude{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 200;
+  padding: 0 80px;
+  margin-bottom: 10px;
+}
+.tieude .td{
+  width: 20%;
+  display: block;
+  /* width: 140px; */
+  height: 80px;
+  padding: 22px;
+  padding-bottom: 0;
+  border-top: 2px solid transparent;
+}
+.tieude .td4{
+ border-top: 2px solid rgb(19, 127, 57);  
+}
+.td.td1:hover{
+  border-top: 2px solid #ff1e00;
+}
+.td.td2:hover{
+  border-top: 2px solid #0af;
+}
+.td.td3:hover{
+  border-top: 2px solid #ff1e00;
+}
+.td.td4:hover{
+  border-top: 2px solid #00a53c;
+}
+.td.td5:hover{
+  border-top: 2px solid violet;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+}
+
+.album {
+  height: 150px;
+  margin-top: 24px;
+}
+.album:hover .tren{
+  opacity: 1;
+}
+.album .tren{
+  width: 100%;
+  height: 75px;
+  background-color: rgba(0,0,0,.7);
+  padding: 15px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  position: relative;
+  opacity: 0;
+  transition: 0.4s;
+}
+.tren span{
+  color: #999;
+  font-size: 11px;
+}
+.tren .icon-zoom{
+  width: 32px;
+  height: 24px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-zoom span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(9.png);
+  background-position: -139px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:transparent;
+
+}
+.tren .icon-zoom:hover{
+  border: 1px solid #fff;
+}
+.tren .icon-zoom:hover span{
+  background-position: -174px 0px;
+}
+.album .duoi{
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0,0,0,.7);
+}
+.album .duoi img{
+  width: 82px;
+  height: 47px;
+  border: 1px solid gray;
+}
+.album .duoi img:hover, .album .duoi img.active{
+  border: 1px solid blue;
+}

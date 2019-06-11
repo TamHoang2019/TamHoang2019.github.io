@@ -1,0 +1,82 @@
+*{
+  margin: 0; padding:0;
+}
+html, body{
+  font-family: 'Roboto', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+#goshop1{
+  width: 270px;
+  margin: 20px auto;
+}
+.tren{
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+
+}
+img.layer1{
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
+.tren .overlay{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0; left: 0; right: 0; bottom: 3px;
+  border-bottom: 3px solid orangered;
+  box-sizing: border-box;
+  opacity: 0;
+}
+.tren:hover .overlay{
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.tren .icons{
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  /* transition: 0.4s; */
+}
+.tren:hover .icons{
+  transform: scale(1);
+  transition: 0.4s;
+}
+.tren .icons i{
+  display: inline-block;
+  padding: 15px;
+  margin: 0 5px;
+  font-size: 15px;
+  /* line-height: 20px; */
+  background-color: #fff;
+  color: #000;
+}
+.tren .icons i:hover, .icons i.cart{
+  background-color: orangered;
+  color: #fff;
+}
+
+.duoi{
+  text-align: center;
+  margin: 20px 0;
+}
+.duoi h3{
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.duoi p{
+  color: orangered;
+  font-size: 15px;
+}
+.duoi p del{
+  color: #b9b9b9;
+  margin-left: 6px;
+}
