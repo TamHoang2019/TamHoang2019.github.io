@@ -17,6 +17,7 @@
 			<a href="../index.html" class="p-2 text-dark">Hiệu ứng</a>
 			<a href="index.html" class="p-2 text-dark active">Hướng dẫn</a>
 			<a href="../thuchanh/index.html" class="p-2 text-dark">Bài tập</a>
+			<a href="../layout/index.html" class="p-2 text-dark">Layout</a>
 			<a href="../JsNative/index.html" class="p-2 text-dark">Games</a>
 			<a href="#" class="p-2 text-dark">jQuery</a>
 		</nav>
@@ -40,7 +41,8 @@
 								<li class="nav-item"><a href="#meo-01" class="nav-link"><i class="fa fa-arrow-right"></i>Tạo sao rating cực kỳ đơn giản bằng css.</a></li>
 								<li class="nav-item"><a href="#meo-02" class="nav-link"><i class="fa fa-arrow-right"></i>Cách tạo trim text (...) cho đoạn văn dài, hiện được trên nhiều dòng.</a></li>
 								<li class="nav-item"><a href="#meo-03" class="nav-link"><i class="fa fa-arrow-right"></i>Tạo background hình mũi tên.</a></li>
-								<li class="nav-item"><a href="#meo-03" class="nav-link"><i class="fa fa-arrow-right"></i>Tạo background trộn màu rất đẹp bằng css.</a></li>
+								<li class="nav-item"><a href="#meo-04" class="nav-link"><i class="fa fa-arrow-right"></i>Phân biệt position:relative, và position:absolute.</a></li>
+								<li class="nav-item"><a href="#meo-05" class="nav-link"><i class="fa fa-arrow-right"></i>Căn giữa text theo chiều dọc.</a></li>
 							<li class="nav-item title">Cách khắc phục</li>
 								<li class="nav-item"><a href="#kp-01" class="nav-link"><i class="fa fa-arrow-right"></i>Khi dùng float bị tràn che mất margin.</a></li>
 								<li class="nav-item"><a href="#kp-02" class="nav-link"><i class="fa fa-arrow-right"></i>Khi transition không hoạt động.</a></li>
@@ -364,6 +366,11 @@
 //bootstrap: 
 - bien 1 checkbox thanh 1 button.
 
+//Căn giữa ko dùng display flex, mà dùng position:relative, và position:absolute;
+căn theo chiều ngang: position: absolute; left: 50%; transform: translateX(-50%);
+căn theo chiều dọc: position: absolute; top: 50%; transform: translateY(-50%);
+// Dùng position nào cũng dịch chuyển vị trí của element được, nhưng mà nếu là position:relative là nó thay đổi vị trí của chính nó, vì vậy ảnh hưởng tới các element cha và con của nó.
+//Dùng position:absolute, thì nó tách hoàn toàn khỏi cha của nó, cho nên dịch chuyển nó ko ảnh hưởng tới độ rộng và chiều cao của element cha.
 				</div> 
 			<!-- end container right -->
 
