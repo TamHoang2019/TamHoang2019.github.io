@@ -1,0 +1,80 @@
+/* video hot */
+
+.song-title {
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 5px;
+	text-transform: capitalize;
+	color: #fcfcfc;
+	cursor: pointer;
+}
+.singer{
+	color: #a0a0a0;
+	opacity: .7;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.video-hot {
+	width: 210px;
+	height: 118px;
+	overflow: hidden;
+	position: relative;
+}
+.video-hot .child{
+	/* background-image: url('https://photo-resize-zmp3.zadn.vn/w600h338_jpeg/thumb_video/0/9/8/c/098cf808a682d7685c0cd4a3a44f028a.jpg'); */
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	transition: all .5s ease;
+}
+.video-hot:hover .child, .video-hot:focus .child{
+	transform: scale(1.2);
+	transition: all .5s ease;
+}
+.video-hot .info{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	padding: 15px 10px 5px;
+}
+.video-hot .overlay{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	background-color: rgba(9,7,13,.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.video-hot .overlay i.play{
+	visibility: hidden;
+}
+.video-hot:hover .overlay i.play{
+	visibility: visible;
+}
+.video-hot:hover .overlay {
+	background-color: rgba(9,7,13,.5);
+}
+.video-hot:hover .info{
+	visibility: hidden;
+}
+
+.video-hot .child.image1{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w600h338_jpeg/thumb_video/0/9/8/c/098cf808a682d7685c0cd4a3a44f028a.jpg');
+}
+.video-hot .child.image2{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w600h338_jpeg/thumb_video/9/6/c/f/96cfca01bf668b5aa8f5392197c9fa1c.jpg');
+}
+.video-hot .child.image3{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w600h338_jpeg/thumb_video/9/c/7/f/9c7fd8380af9c5c17c6b4ea3816e9e85.jpg');
+}
+.video-hot .child.image4{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w600h338_jpeg/thumb_video/9/5/8/7/9587d37a26dca30e548b97d1e99e553a.jpg');
+}
+.video-hot .child.image5{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w600h338_jpeg/thumb_video/3/4/b/c/34bc4698c19f4de46fba35a993d9d0e7.jpg');
+}

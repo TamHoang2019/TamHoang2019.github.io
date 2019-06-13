@@ -1,0 +1,77 @@
+/* header bar */
+
+.header-bar{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	cursor: pointer;
+	
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.header-bar .logo{
+	background-image: url('https://zmp3-static.zadn.vn/skins/zmp3-v5.2/images/logo-mp-3.svg');
+	background-size: cover;
+	background-position: center;
+	width: 100px;
+	height: 32px;
+}
+.header-bar .logo a{
+	font-size: 0;
+}
+.header-bar nav {
+	text-transform: uppercase;
+	flex-grow: 1;
+}
+.header-bar nav ul{
+	list-style: none;	
+	display: flex;
+	justify-content: center;
+}
+.header-bar nav ul li{
+	display: inline-block;
+}
+.header-bar nav ul li a {
+	padding: 12px 8px;
+	font-weight: 500;
+	color: #92929d;
+	font-size: 15px;
+}
+.header-bar nav ul li a:hover{
+	border-bottom: 2px solid #65509e;
+}
+.header-bar .form-search{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	margin: 0 15px;
+}
+.header-bar .form-search form{
+	margin: 0;
+	border: 1px solid #fcfcfc;
+	border-radius: 5px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.header-bar .form-search form button{
+	font-size: 20px;
+	border: 0;
+	margin: 0 5px;
+}
+.header-bar .form-search form input{
+	border: 0;
+	height: 38px;
+}
+.header-bar .account{
+	display: flex;
+	align-items: center;
+}
+.header-bar .account img{
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	margin-right: 10px;
+}

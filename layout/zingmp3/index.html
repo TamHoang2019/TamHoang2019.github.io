@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Master CSS 2019</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css-2/style.css"> -->
+	<link rel="stylesheet" href="css/layout.css">
+	<title>Mp3 - Zing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://zmp3-static.zadn.vn/skins/zmp3-v5.2/css/styles.9.21.css">
+    <link rel="stylesheet" href="https://zmp3-static.zadn.vn/skins/zmp3-v5.2/fonts/v2.1/styles.css">
+    <!-- end icon zing -->
+    <link rel="stylesheet" href="css/com1.css">
+    <link rel="stylesheet" href="css/com2.css">
+    <link rel="stylesheet" href="css/com3.css">
+    <link rel="stylesheet" href="css/com4.css">
+    <link rel="stylesheet" href="css/com5.css">
+    <link rel="stylesheet" href="css/com6.css">
+    <link rel="stylesheet" href="css/com7.css">
+    <link rel="stylesheet" href="css/com8.css">
+    <link rel="stylesheet" href="css/com9.css">
+    <link rel="stylesheet" href="css/com10.css">
+    <link rel="stylesheet" href="css/com11.css">
+    <link rel="stylesheet" href="css/com12.css">
+    <link rel="stylesheet" href="css/com13.css">
+    <link rel="stylesheet" href="css/com14.css">
+    <link rel="stylesheet" href="css/com15.css">
+    <link rel="stylesheet" href="css/com16.css">
+    <script src="js/index.js"></script>
+</head>
+<body onload="startTime()">
+	<div class="wrapper">
+		<div class="header">
+			<header class="header-bar">
+	            <div class="logo"><a href="#">Zing Mp3</a></div>
+	            <nav class="main-nav">
+	                <ul>
+	                    <li><a href="#">Trang chủ</a></li>
+	                    <li><a href="#">#zingchart</a></li>
+	                    <li><a href="#">top 100</a></li>
+	                    <li><a href="#">video</a></li>
+	                    <li><a href="#">nhạc cá nhân</a></li>
+	                </ul>
+	            </nav>
+	            <div class="form-search">
+	                <form action="">
+	                    <button class="search"><i class="icon ic-search"></i></button>
+	                    <input type="text" placeholder="Tìm kiếm"  >
+	                </form>
+	            </div>
+	            <div class="account">
+	                <img src="https://s120.avatar.talk.zdn.vn/b/2/8/2/0/120/6a79f3f6c6c2bc41ddff7f554eee9ac0.jpg" alt="">
+	                <i class="icon ic-go-down"></i>
+	            </div>
+	        </header>
+		</div>
+		<div class="main">
+			<section class="slider-main">
+				<div class="carousel carousel-top">
+		            <div class="mySlides"><img src="https://photo-zmp3.zadn.vn/banner/f/6/9/5/f6955e5f756d88f756011f72698d6878.jpg" alt=""></div>
+		            <!-- <div class="mySlides"><img src="https://photo-zmp3.zadn.vn/banner/0/3/7/9/0379c284cbcec08acc30452d9b888f1e.jpg" alt=""></div> -->
+
+		            <div class="button">
+		                <button class="prev" onclick="plusSlides(-1)" ><i class="icon ic-go-left"></i></button>
+		                <button class="next" onclick="plusSlide(1)"><i class="icon ic-go-right"></i></button>
+		            </div>
+		            <div class="thumbnail">
+		                <div class="thumb thumb1 active" onclick="currentSlide(1)"><img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/avatars/a/a/b/d/aabd06b213821214df66ec101d114c3d.jpg" alt=""></div>
+		                <div class="thumb thumb2" onclick="currentSlide(2)">
+		                    <img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/avatars/5/8/b/1/58b14bb968b7b4a78cbc38c570d43c38.jpg" alt="">
+		                </div>
+		                <div class="thumb thumb3" onclick="currentSlide(3)">
+		                    <img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/avatars/d/3/a/6/d3a6042acde114b0178641421f588736.jpg" alt="">
+		                </div>
+		                <div class="thumb thumb4" onclick="currentSlide(4)">
+		                    <img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/avatars/f/1/0/9/f1091c0100e1e44f2ae35fb5ca8fe415.jpg" alt="">
+		                </div>
+		                <div class="thumb thumb5" onclick="currentSlide(5)">
+		                    <img src="https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/avatars/e/3/4/d/e34dc33d67c84556fb27c63921e53561.jpg" alt="">
+		                </div>
+		            </div>
+		        </div>
+			</section>
+			<section class="indented">
+				<div class="zingchart-banner">
+		            <div class="zingchart">
+		                <div class="info-top">
+		                    <button class="zingchart">#zingchart</button>
+		                    <span id="txt"></span>
+		                    <button class="play-all"><i class="icon ic-play"> </i> Nghe tất cả</button>
+		                </div>
+		                <div class="canvas-middle">
+		                    
+		                </div>
+		                <div class="number-bottom">
+		                    <div class="number1">01</div>
+		                    <div class="number2">02</div>
+		                    <div class="number3">03</div>
+		                    <div class="number4">04</div>
+		                    <div class="number5">05</div>
+		                    <div class="number6">06</div>
+		                    <div class="number7">07</div>
+		                    <div class="number8">08</div>
+		                    <div class="number9">09</div>
+		                    <div class="number10">10</div>
+		                    <div class="number11">11</div>
+		                    <div class="number12">12</div>
+		                </div>
+		            </div>
+		            <div class="list-songs">
+		                <div class="zingchart-weekly"> 
+		                    <div class="overlay"></div>
+		                    <div class="rank blue">01</div>
+		                    <div class="image image1">
+		                        <i class="play icon ic-svg-play-outline"></i>
+		                    </div>
+		                    <div class="info">
+		                        <div class="song-title">Hồng Nhan</div>
+		                        <div class="singer">Jack</div>
+		                    </div>
+		                    <div class="percent blue">53%</div>
+		                </div>
+		                <div class="zingchart-weekly"> 
+		                    <div class="overlay"></div>
+		                    <div class="rank green">02</div>
+		                    <div class="image image2">
+		                        <i class="play icon ic-svg-play-outline"></i>
+		                    </div>
+		                    <div class="info">
+		                        <div class="song-title">Một bước yêu vạn dặm đau</div>
+		                        <div class="singer">Mr Siro</div>
+		                    </div>
+		                    <div class="percent green">32%</div>
+		                </div>
+		                <div class="zingchart-weekly"> 
+		                    <div class="overlay"></div>
+		                    <div class="rank red">03</div>
+		                    <div class="image image3">
+		                        <i class="play icon ic-svg-play-outline"></i>
+		                    </div>
+		                    <div class="info">
+		                        <div class="song-title">Cuộc vui cô đơn</div>
+		                        <div class="singer">Lê bảo bình</div>
+		                    </div>
+		                    <div class="percent red">28%</div>
+		                </div>
+		                <div class="zingchart-weekly"> 
+		                    <div class="overlay"></div>
+		                    <div class="rank white">04</div>
+		                    <div class="image image4">
+		                        <i class="play icon ic-svg-play-outline"></i>
+		                    </div>
+		                    <div class="info">
+		                        <div class="song-title">Em đã thấy anh cùng người ấy</div>
+		                        <div class="singer">Hương Giang</div>
+		                    </div>
+		                    <div class="percent"></div>
+		                </div>
+		                <div class="zingchart-weekly"> 
+		                    <div class="overlay"></div>
+		                    <div class="rank white">05</div>
+		                    <div class="image image5">
+		                        <i class="play icon ic-svg-play-outline"></i>
+		                    </div>
+		                    <div class="info">
+		                        <div class="song-title">Đúng người đúng thời điểm</div>
+		                        <div class="singer">Thanh Hưng</div>
+		                    </div>
+		                    <div class="percent"></div>
+		                </div>
+		                <div class="see-all">Xem tất cả</div>
+		            </div>
+		        </div>
+			</section>
+			<section class="zingchart indented">
+				<div class="title-bar">
+		            <div class="title"><a href="#" class="_16px">#Zingchart  <i class="icon ic-go-right _12px"></i></a></div>
+		            <div class="more-right"></div>
+		        </div>
+				<div class="zingchart-region">
+		            <div class="image image1"></div>
+		        </div>
+		        <div class="zingchart-region">
+		            <div class="image image2"></div>
+		        </div>
+		        <div class="zingchart-region">
+		            <div class="image image3"></div>
+		        </div>
+		        <div class="zingchart-region">
+		            <div class="image image4"></div>
+		        </div>
+			</section>
+			<!-- zingchart section ends			 -->
+
+			<section class="top100-index indented">
+				<div class="title-bar">
+		            <div class="title"><a href="#">Top 100 <i class="icon ic-go-right"></i></a></div>
+		            <div class="more-right"></div>
+		        </div>
+				<div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image1"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc hoa hay nhất</a></div>
+		        </div>
+		        <div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image2"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc thiếu nhi hay nhất</a></div>
+		        </div>
+		        <div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image3"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc dance việt nam hay nhất</a></div>
+		        </div>
+		        <div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image4"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc phim việt nam hay nhất</a></div>
+		        </div>
+		        <div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image5"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc trịnh hay nhất</a></div>
+		        </div>
+		        <div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image6"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc quê hương hay nhất</a></div>
+		        </div>
+		        <div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image7"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc trẻ hay nhất</a></div>
+		        </div>
+		        <div class="top100">
+		            <div class="top100-cover">
+		                <div class="overlay"></div>
+		                <div class="play-actions"><i class="play icon ic-svg-play-outline"></i></div>
+		                <div class="image image8"></div>
+		            </div>
+		            <div class="title"><a href="#">Top 100 nhạc Electronic/Dance Âu Mỹ hay nhất</a></div>
+		        </div>
+			</section>
+			<!-- end section top 100 -->
+			<section class="new-song-index indented">
+				<div class="title-bar">
+		            <div class="title"><a href="#">Bài hát mới  <i class="icon ic-go-right"></i></a></div>
+		            <div class="more-right"><button class="play-all"><i class="icon ic-play"> </i> Nghe tất cả</button></div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image1">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Mẹ và những vì sao</a></div>
+		                <div class="singer"><a href="#">Tino</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image2">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Xin một lần ngoại lệ</a></div>
+		                <div class="singer"><a href="#">Keyo</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image3">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Ai hiểu cho ai (what's next ost)</a></div>
+		                <div class="singer"><a href="#">Phutoro, Corner, 2z</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image4">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Cô ấy đã từng (EDM version)</a></div>
+		                <div class="singer"><a href="#">Shine Thành Anh, DJ Kendy Hoàng</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image5">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Mẹ ơi</a></div>
+		                <div class="singer"><a href="#">Uni5</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image6">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Đập vỡ cây đàn</a></div>
+		                <div class="singer"><a href="#">Vũ Hoàng Minsk, SONBEAT</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image7">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Vì yêu khiến em dối lừa</a></div>
+		                <div class="singer"><a href="#">Trung Tự</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image8">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Đủ xa tình sẽ cũ</a></div>
+		                <div class="singer"><a href="#">JSOL</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+		        <div class="new-song"> 
+		            <div class="image image9">
+		                <div class="overlay"></div>
+		                <i class="play icon ic-svg-play-outline"></i>
+		            </div>
+		            <div class="info">
+		                <div class="song-title"><a href="#">Nếu không là mãi mãi</a></div>
+		                <div class="singer"><a href="#">Anh Tú Atus</a></div>
+		            </div>
+		            <div class="more-option">
+		                <i class="icon ic-info"></i>
+		                <i class="icon ic-more"></i>
+		            </div>
+		        </div>
+			</section>
+			<!-- section bai-hat-moi ends -->
+			<section class="topic-index indented">
+				<div class="title-bar">
+		            <div class="title"><a href="#"> Chủ đề & thể loại <i class="icon ic-go-right"></i></a></div>
+		            <div class="more-right">
+						 <ul class="select-option">
+				            <li><a class="active" href="#">Chọn Lọc</a></li>
+				            <li><a href="#">Chủ đề</a></li>
+				            <li><a href="#">Thể Loại</a></li>
+				        </ul>
+		            </div>
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image1">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Love</div>
+
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image2">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Nhạc trẻ</div>
+
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image3">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Những bài hit</div>
+
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image4">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Nhạc Dance</div>
+
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image5">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Nhạc việt bất hủ</div>
+
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image6">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Nhạc hoa</div>
+
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image7">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Hôm nay nghe gì</div>
+
+		        </div>
+		        <div class="topic-cover">
+		            <div class="topic image8">
+		                <div class="overlay"></div>
+		            </div>
+		            <div class="topic-name">Zing Collection</div>
+
+		        </div>
+			</section>
+			<!-- section chu-de-&-the-loai ends -->
+			<section class="album-hot-index indented">
+				<div class="title-bar">
+		            <div class="title"><a href="#"> Album Hot <i class="icon ic-go-right"></i></a></div>
+		            <div class="more-right">
+						 <ul class="select-option">
+				            <li><a class="active" href="#">Chọn Lọc</a></li>
+				            <li><a href="#">Việt Nam</a></li>
+				            <li><a href="#">Âu Mỹ</a></li>
+				            <li><a href="#">Hàn Quốc</a></li>
+				        </ul>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image1">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Duyên (Single)</a></div>
+		                <div class="singer">Huỳnh Tú, Khói, Magazine</div>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image2">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Đủ xa tình sẽ cũ (Single)</a></div>
+		                <div class="singer">JSOL</div>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image3">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Không sợ ma (Lật mặt 4: Nhà có khách OST) (Single)</a></div>
+		                <div class="singer">Jay Quân, Mạc Văn Khoa</div>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image4">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Chú ơi em thích anh (Single)</a></div>
+		                <div class="singer">Võ đình nam</div>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image5">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Nửa còn lại (Single)</a></div>
+		                <div class="singer">XKEY band</div>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image6">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Ánh Dương (Single)</a></div>
+		                <div class="singer">Nguyên, $eth</div>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image7">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Em vẫn chưa về (Remix) (Single)</a></div>
+		                <div class="singer">Đình Phong, Tom Milano</div>
+		            </div>
+		        </div>
+		        <div class="album-hot">
+		            <div class="child image8">
+		                <div class="overlay">
+		                    <i class="play icon ic-svg-play-outline"></i>
+		                </div>
+		            </div>
+		            
+		            <div class="info">
+		                <div class="song-title"><a href="#">Đến lúc phải dừng lại</a></div>
+		                <div class="singer">Trương Ngôn</div>
+		            </div>
+		        </div>
+			</section>
+			<!-- section album-hot ends -->
+			<section class="video-hot-index indented">
+				<div class="title-bar">
+		            <div class="title"><a href="#"> Video Hot <i class="icon ic-go-right"></i></a></div>
+		            <div class="more-right">
+						 <ul class="select-option">
+				            <li><a class="active" href="#">Chọn Lọc</a></li>
+				            <li><a href="#">Việt Nam</a></li>
+				            <li><a href="#">Âu Mỹ</a></li>
+				            <li><a href="#">Hàn Quốc</a></li>
+				        </ul>
+		            </div>
+		        </div>
+		        <div class="carousel">
+		        	<div class="button">
+		                <button class="prev disable" onclick="plusSlides(-1)" ><i class="icon ic-go-left"></i></button>
+		                <button class="next able" onclick="plusSlide(1)"><i class="icon ic-go-right"></i></button>
+		            </div>
+		            <div class="video-hot">
+			            <div class="child image1"></div>
+			            <div class="overlay"> 
+			                <i class="play icon ic-svg-play-outline"></i>
+			            </div>
+			            <div class="info">
+			                <div class="song-title">Đủ xa tình sẽ </div>
+			                <div class="singer">JSOL</div>
+			            </div>
+			        </div>
+			        <div class="video-hot">
+			            <div class="child image2"></div>
+			            <div class="overlay"> 
+			                <i class="play icon ic-svg-play-outline"></i>
+			            </div>
+			            <div class="info">
+			                <div class="song-title">Em đã thấy anh cùng người ấy</div>
+			                <div class="singer">Hương giang</div>
+			            </div>
+			        </div>
+			        
+			        <div class="video-hot">
+			            <div class="child image3"></div>
+			            <div class="overlay"> 
+			                <i class="play icon ic-svg-play-outline"></i>
+			            </div>
+			            <div class="info">
+			                <div class="song-title">Sometimes</div>
+			                <div class="singer">HER</div>
+			            </div>
+			        </div>
+			        
+			        <div class="video-hot">
+			            <div class="child image4"></div>
+			            <div class="overlay"> 
+			                <i class="play icon ic-svg-play-outline"></i>
+			            </div>
+			            <div class="info">
+			                <div class="song-title">Xin một lần ngoại lệ </div>
+			                <div class="singer">Keyo</div>
+			            </div>
+			        </div>
+			        
+			        <div class="video-hot">
+			            <div class="child image5"></div>
+			            <div class="overlay"> 
+			                <i class="play icon ic-svg-play-outline"></i>
+			            </div>
+			            <div class="info">
+			                <div class="song-title">Trang Nguyệt Cát</div>
+			                <div class="singer">Tranee, Nguyễn Minh Thắng</div>
+			            </div>
+			        </div>
+		        </div>
+		        
+		        
+			</section>
+			<!-- section video-hot ends -->
+			
+			<!-- ends artist cover 1-->
+			<section class="artist-hot-index indented">
+				<div class="title-bar">
+		            <div class="title"><a href="#">Nghệ sĩ nổi bật <i class="icon ic-go-right"></i></a></div>
+		            <div class="more-right"></div>
+		        </div>
+		        <div class="carousel">
+		        	<div class="button">
+		                <button class="prev disable" onclick="plusSlides(-1)" ><i class="icon ic-go-left"></i></button>
+		                <button class="next able" onclick="plusSlide(1)"><i class="icon ic-go-right"></i></button>
+		            </div>
+		        	<div class="artist-cover">
+	            		<div class="image image1">
+			                <a href="#"><span class="overlay"></span></a>
+			                <img src="https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/4/3/43d8be33dc00a33132c82adb9d0d3a54_1509355224.jpg" alt="">
+			            </div>
+			            <div class="singer"><a href="#">Bích Phương</a></div>
+			        </div>
+			        <div class="artist-cover">
+	            		<div class="image image2">
+			                <a href="#"><span class="overlay"></span></a>
+			                <img src="https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/2/4/240f538345436a584ec7abc0a5afd8c5_1512443374.jpg" alt="">
+			            </div>
+			            <div class="singer"><a href="#">Rum</a></div>
+			        </div>
+			        <div class="artist-cover">
+	            		<div class="image image3">
+			                <a href="#"><span class="overlay"></span></a>
+			                <img src="https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/8/9/89338ce53557eaefbd61fcee4f9b901b_1512444828.jpg" alt="">
+			            </div>
+			            <div class="singer"><a href="#">Masew</a></div>
+			        </div>
+			        <div class="artist-cover">
+	            		<div class="image image4">
+			                <a href="#"><span class="overlay"></span></a>
+			                <img src="https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/b/f/b/9/bfb9522fe78758e81dfcb4b70d3f8f52.jpg" alt="">
+			            </div>
+			            <div class="singer"><a href="#">Hương Tràm</a></div>
+			        </div>
+		        </div>
+		        
+			</section>
+		</div> 
+		<!-- main  -->
+		<div class="footer">
+			<div class="banner-footer">
+	            <div class="slogan">
+	                <a class="logo" href="#"><img src="https://zmp3-static.zadn.vn/skins/zmp3-v5.2/images/logo-mp-3.png" alt=""></a>
+	                <span>Hãy đăng nhập để khám phá thêm nhiều bài hát dành riêng cho bạn</span>
+	            </div>
+	            <button class="login">Đăng Nhập</button>
+	        </div>
+	        <div class="zalo">
+	        	<a class="logo" href="#"><img src="https://zmp3-static.zadn.vn/skins/zmp3-v5.2/images/logo-mp-3.png" alt=""></a>
+	            <span>Một sản phẩm của Zalo
+	                </span>
+	        </div>
+	        <div class="nav-footer">
+	        	<ul>
+	        		<li><a href="#">Liên hệ</a></li>
+	        		<li><a href="#" class="link-special" title="•" target="_blank">•</a></li>
+	        		<li><a href="#">Quảng cáo</a></li>
+	        		<li><a href="#" class="link-special" title="•" target="_blank">•</a></li>
+	        		<li><a href="#">Góp ý</a></li>
+	        	</ul>
+	        </div>
+		</div>
+	</div>
+</body>
+</html>

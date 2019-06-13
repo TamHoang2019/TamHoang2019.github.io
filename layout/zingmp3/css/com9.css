@@ -1,0 +1,44 @@
+/* circle artist */
+.artist-cover{
+	width: 210px;
+	height: 210px;
+	background-color: #f9f9f9;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.artist-cover a{
+	color: #32323d;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.artist-cover a:hover{
+	color: #6e55b4;
+}
+.artist-cover .image{
+	position: relative;
+
+}
+.artist-cover img, .artist-cover .overlay{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+/* 	position: absolute;
+ */
+}
+.artist-cover .overlay{
+	background-color: rgba(0, 0, 0, .4);
+	position: absolute;
+	opacity: 0;
+}
+.artist-cover .overlay:hover{
+	opacity: 1;
+}
+
+.artist-cover .singer{
+	padding-top: 20px;
+}

@@ -1,0 +1,25 @@
+/* nav select option */
+ul.select-option{
+	padding: 0;
+	list-style: none;
+	display: flex;
+ 	justify-content: flex-end;
+ 	/* position: relative;  */
+}
+ul.select-option li{
+
+	/* position: absolute; */
+	/* right: 0; */
+	display: inline-block;
+	padding: 0 20px;
+	/* float: right; */
+}
+ul.select-option a{
+	text-decoration: none;
+	color: #a0a0a0;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+ul.select-option a:hover, ul.select-option a.active{
+	color: #6e55b4;
+}

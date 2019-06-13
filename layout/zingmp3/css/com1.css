@@ -1,0 +1,99 @@
+.zingchart-weekly {
+	display:  flex;
+	justify-items: center;
+	align-items: center;
+	position: relative;
+}
+.zingchart-weekly .overlay {
+	height: 100%;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+}
+.zingchart-weekly:hover .overlay{
+	opacity: 1;
+	background-color: rgba(255,255,255,.15);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+.zingchart-weekly:hover i.play{
+	opacity: 1;
+	transition: all 0.15s ease;
+}
+.zingchart-weekly:hover .image{
+	transition: all 0.5s ease;
+	box-sizing: border-box;
+	transform: scale(1.04);
+}
+.zingchart-weekly .rank {
+	font-size:  20px;
+	margin:  0 10px 0 10px;
+}
+.zingchart-weekly .image{
+	margin: 0 10px 0 0;
+	/* background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/5/a/5/a/5a5a51ec2a1fdd0acb905ed8288f05b5.jpg'); */
+	background-size: contain;
+	width:  50px;
+	height: 50px;
+	border-radius: 3px;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.zingchart-weekly .image.image1{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/5/a/5/a/5a5a51ec2a1fdd0acb905ed8288f05b5.jpg');
+}
+.zingchart-weekly .image.image2{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/e/1/1/2/e1120261421cfec7513423222b0ca94c.jpg');
+}
+.zingchart-weekly .image.image3{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/a/5/3/7/a53786e6d5671c6a87c29ab79d5c0251.jpg');
+}
+.zingchart-weekly .image.image4{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/d/4/e/f/d4ef2628425fb5a456e23cce31b50a2e.jpg');
+}
+.zingchart-weekly .image.image5{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/avatars/c/7/2/5/c7251165037599f02bbcee8550b37c16.jpg');
+}
+.zingchart-weekly .image .icon {
+	width: 60%;
+	height: 60%;
+	opacity: 0;
+	cursor: pointer;
+}
+.zingchart-weekly .info {
+	flex-grow: 1;
+	max-width: 115px;
+}
+.zingchart-weekly .info .song-title {
+	color:  #f0f0f0;
+	font-size:  13px;
+	font-weight:  400;
+}
+.zingchart-weekly .info .singer{
+	color:  #a0a0a0;
+	font-size:  12px;
+	font-weight:  200;	
+}
+.zingchart-weekly .percent {
+	font-size:  14px;
+	padding:  0 10px 0 0;
+}
+.white{
+	color: #fff;
+}
+.red{
+	color: #e4340d;
+}
+.green{
+	color: #50e3c2;
+}
+.blue{
+	color:  #4a90e2;
+
+}

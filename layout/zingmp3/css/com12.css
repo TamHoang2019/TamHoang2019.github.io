@@ -1,0 +1,30 @@
+/* zingchart region */
+.zingchart-region{
+	width: 210px;
+	height: 118px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.zingchart-region .image{
+	transition: all .5s ease;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.zingchart-region:hover .image{
+	transform: scale(1.2);
+	transition: all .3s ease;
+}
+.zingchart-region .image1 {
+	background-image: url('https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/song-vn.jpg');
+}
+.zingchart-region .image2 {
+	background-image: url('https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/mv-vn.jpg');
+}
+.zingchart-region .image3 {
+	background-image: url('https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/song-usuk.jpg');
+}
+.zingchart-region .image4 {
+	background-image: url('https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/song-kpop.jpg');
+}

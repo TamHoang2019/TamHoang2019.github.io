@@ -1,0 +1,30 @@
+body {
+	
+	font-family: Roboto,sans-serif;
+
+}
+.footer {
+	text-align: center;
+}
+.footer .zalo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer .zalo img{
+	margin-right: 10px;
+}
+.footer .nav-footer ul{
+	list-style: none;
+}
+.footer .nav-footer li{
+	display: inline-block;
+}
+.footer a.link-special{
+	margin: 0 5px;
+	font-size: 22px;
+	color: #d8d8d8;
+	top: 4px;
+	position: relative;
+}
+

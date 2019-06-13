@@ -1,0 +1,110 @@
+/* Bài hat  */
+
+.new-song {
+	display:  flex;
+	padding: 5px 10px;
+	margin-bottom: 5px;
+	background-color: #f3f3f3;
+	justify-items: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.new-song:hover i.play{
+	opacity: 1;
+}
+.new-song .image{
+	margin: 0 10px 0 0;
+	/* background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/0/6/2/b/062bef474dca67fc1829938b1e3cef2a.jpg'); */
+	background-size: contain;
+	width:  40px;
+	height: 40px;
+	border-radius: 3px;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	position: relative;
+}
+.new-song .image.image1{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/0/6/2/b/062bef474dca67fc1829938b1e3cef2a.jpg');
+}
+.new-song .image.image2{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/avatars/c/2/d/6/c2d64711243edd5c1114cdd5821fcb75.jpg');
+}
+.new-song .image.image3{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/2/8/8/b/288b40fcaaa4f5763f7cc6db2fae276b.jpg');
+}
+.new-song .image.image4{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/1/9/2/0/19200288137266d1d08f5540f25398df.jpg');
+}
+.new-song .image.image5{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/c/8/6/3/c8635e57963f469fc43db6f880555b64.jpg');
+}
+.new-song .image.image6{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/6/5/1/f/651f61cfdc9118fb48b950ff3b6ac658.jpg');
+}
+.new-song .image.image7{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/b/9/0/f/b90fede4d6329908ac400b0b8b04929c.jpg');
+}
+.new-song .image.image8{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/2/c/8/3/2c83186493735e7ffe352f055eefa4d4.jpg');
+}
+.new-song .image.image9{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w94h94_jpeg/cover/b/5/8/a/b58a3992f7d4768f00bc0a4fb02c1ede.jpg');
+}
+.new-song .image .overlay {
+	height: 100%;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+}
+.new-song:hover .image .overlay{
+	opacity: 1;
+	background-color: rgba(9,7,13,.5);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+.new-song .image .icon {
+	width: 60%;
+	height: 60%;
+	opacity: 0;
+	cursor: pointer;
+}
+.new-song .info {
+	flex-grow: 1;
+}
+.new-song .info .song-title {
+	color:  #f0f0f0;
+	font-weight: 700;
+	text-transform: capitalize;
+	font-size: 14px;
+}
+.new-song .info .singer{
+	color:  #a0a0a0;
+	font-size:  12px;
+	font-weight:  400;
+	margin-top: 5px;	
+}
+.new-song .more-option {
+	font-size:  18px;
+	color:  #2a2b3f;
+	cursor: pointer;
+	opacity: 0;
+
+}
+
+.new-song i.icon {
+	padding: 10px;
+}
+.new-song:hover .more-option{
+	opacity:  1;
+}
+.new-song:hover {
+	background-color: #efefef;
+}

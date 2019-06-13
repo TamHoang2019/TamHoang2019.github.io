@@ -1,0 +1,55 @@
+/* zingchart-banner */
+.zingchart-banner {
+	display: grid;
+	grid-template-columns: 68% 32%;
+	height: 400px;
+	/* position: relative; */
+	color: #fcfcfc;
+
+}
+.zingchart-banner .zingchart{
+	background-image: url('https://zmp3-static.zadn.vn/skins/zmp3-v5.2/images/bg-chart.svg'); 
+	position: relative;
+	padding:20px 0;
+}
+.zingchar-banner .zingchart .info-top{
+	margin: 15px;
+	box-sizing: border-box;
+}
+.zingchart-banner button.zingchart{
+	padding: 5px 10px;
+	font-weight: 700;
+	background: linear-gradient(to right, #4b38d7, #8d4fe2);
+	border-radius: 12px;
+	border: 0px;
+	color: #fcfcfc;
+	font-size: 12px;
+	margin-right: 20px;
+}
+.zingchart-banner button.play-all{
+	position: absolute;
+	right: 0;
+}
+.zingchart-banner .number-bottom{
+	color: rgb(162, 162, 162);
+	position: absolute;
+	bottom: 15px;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.zingchart-banner .list-songs{
+	padding: 15px;
+	background-color: #342A55;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.zingchart-banner .list-songs .see-all {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 200;
+	cursor: pointer;
+}

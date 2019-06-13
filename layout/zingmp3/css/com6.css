@@ -1,0 +1,88 @@
+/* album hot */
+
+.song-title {
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 5px;
+	text-transform: capitalize;
+	color: #fcfcfc;
+	cursor: pointer;
+}
+.singer{
+	color: #a0a0a0;
+	opacity: .7;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.album-hot {
+	width: 210px;
+	/* height: 118px; */
+	overflow: hidden;
+/* 	position: relative;
+ */}
+.album-hot .child{
+	/* background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/b/7/e/7/b7e7197f1e5c94bacce9542238d52108.jpg'); */
+	width: 100%;
+	padding-top: 100%;
+	background-size: cover;
+	transition: all .5s ease;
+	position: relative;
+
+}
+.album-hot:hover .child, .album-hot:focus .child{
+	transform: scale(1.05);
+	transition: all .5s ease;
+}
+.album-hot .info{
+	/* position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1; */
+	/* padding: 15px 10px 5px; */
+}
+.album-hot .overlay{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	/* background-color: rgba(9,7,13,.2); */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.album-hot .overlay i.play{
+	visibility: hidden;
+}
+.album-hot:hover .overlay i.play{
+	visibility: visible;
+}
+.album-hot:hover .overlay {
+	background-color: rgba(9,7,13,.5);
+}
+.album-hot .child.image1{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/b/7/e/7/b7e7197f1e5c94bacce9542238d52108.jpg');
+}
+.album-hot .child.image2{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/2/c/8/3/2c83186493735e7ffe352f055eefa4d4.jpg');
+}
+.album-hot .child.image3{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/8/f/3/b/8f3bbf33c1a031935140e365abf1c3f9.jpg');
+}
+.album-hot .child.image4{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/f/e/b/4/feb4f7e79393e5028137bba803fc4b31.jpg');
+}
+.album-hot .child.image5{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/c/6/6/f/c66f783c9c08ce973d1ae132b527df2a.jpg');
+}
+.album-hot .child.image6{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/e/b/e/d/ebed306c4e77c34f9304c63a96398344.jpg');
+}
+.album-hot .child.image7{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/f/e/f/0/fef0cabd737a0d4e79a2d12b43ca5dbd.jpg');
+}
+.album-hot .child.image8{
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/covers/0/4/0417f097512a1ec840fc584899529a7a_1489386778.jpg');
+}
+

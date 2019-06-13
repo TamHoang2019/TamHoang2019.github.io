@@ -1,0 +1,40 @@
+/* banner footer */
+.banner-footer{
+	height: 70px;
+	background: url('https://zmp3-static.zadn.vn/skins/zmp3-v5.2/images/banner-bg.svg') center/cover no-repeat;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-bottom: 30px;
+
+}
+.slogan{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	color: #fff;
+	font-weight: 700;
+}
+.slogan img{
+	height: 40px;
+	width: 40px;
+}
+.slogan span{
+	margin-left: 20px;
+}
+.banner-footer button.login{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 15px;
+	color: #fff;
+	padding: 4px 12px;
+	border: 0px;
+	border-radius: 4px;
+	background-color: #fdd100;
+}
+.banner-footer button.login:hover{
+	color: #6e55b4;
+	background-color: #fcfcfc;
+}

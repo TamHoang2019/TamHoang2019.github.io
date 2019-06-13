@@ -1,0 +1,73 @@
+/* carousel header */
+.carousel {
+	position: relative;
+}
+.carousel .button {
+	/* width: 100%; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	left: -46px;
+	right: -45px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.carousel-top .button{
+	width: 100%;
+	left: 0;
+}
+.carousel .button button{
+	color: #32323d;
+	vertical-align: middle;
+	background-color: rgba(255, 255, 255, 0.2);
+	width: 32px;
+	height: 80px;
+	text-align: center;
+	border: 0px;
+}
+.carousel .button button:hover{
+	background-color: #65509e;
+	color: #fcfcfc;
+}
+.carousel .button button.disable{
+	background-color: #FBFCFD;
+	color: #32323d;
+	opacity: .1;
+}
+.carousel .button button.able{
+	background-color: #e5e5e5;
+}
+.carousel .mySlides > img{
+	width: 100%;
+}
+.carousel .thumbnail{
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 15px 40px;
+}
+.carousel .thumbnail .thumb {
+	margin: 0 3px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.carousel .thumbnail .thumb img{
+	width: 60px;
+	height: 60px;
+	border:  2px solid;
+	border-color: rgba(255, 255, 255, 0);
+	border-radius: 3px;
+}
+
+.carousel .thumbnail .thumb:hover > img, 
+.carousel .thumbnail .thumb.active > img
+ {
+	border-color: rgba(255, 255, 255, 1);
+}
+
+/* .carousel .mySlides{
+	display: none;
+} */

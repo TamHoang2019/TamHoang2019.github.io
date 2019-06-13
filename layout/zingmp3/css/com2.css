@@ -1,0 +1,89 @@
+/* top100 */
+.top100{
+	width: 210px;
+}
+.top100:hover .overlay{
+	opacity: 1;
+	transform: scale(1.02);
+	transition: all 0.2s ease;
+}
+.top100:hover .image{
+	transform: scale(1.02);
+	transition: all 0.2s ;
+}
+
+.top100-cover{
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+}
+
+.top100-cover .image, .top100-cover .overlay, .top100-cover .play-actions
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-position: center;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+.top100-cover .image1 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/2/9/e/8/29e8461f9e2d961ece06a5a63914acf0.jpg');
+}
+.top100-cover .image2 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/3/7/4/3/374334348907f5b1bd5b72200b79369f.jpg');
+}
+.top100-cover .image3 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/1/0/f/c/10fc37c128dbc5e3987fe6617744fb88.jpg');
+}
+.top100-cover .image4 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/e/e/f/5/eef5371babdb5bb118106d2894a9193b.jpg');
+}
+.top100-cover .image5 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/4/9/e/c/49ecd5d790d3cd61c76c52e0043210a5.jpg');
+}
+.top100-cover .image6 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/7/9/c/2/79c21ec44964eb3a4775208f897f46ee.jpg');
+}
+.top100-cover .image7 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/d/8/9/a/d89a43bb694a7fde1e3f632cf0866b4c.jpg');
+}
+.top100-cover .image8 {
+	background-image: url('https://photo-resize-zmp3.zadn.vn/w240h240_jpeg/cover/4/e/b/7/4eb7287420990f5f0ec0ac93749068b6.jpg');
+}
+.top100-cover .overlay{
+	background-color: rgba(0, 0, 0, .2);
+	z-index: 2;
+	opacity: 0;
+}
+.top100-cover .play-actions{
+	z-index: 3;
+	/* text-align: center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: ;
+}
+/* .top100-cover .overlay i.play{
+	z-index: 3;
+	opacity: 1;
+} */
+
+.top100 .title{
+	text-align: left;
+	text-transform: capitalize;
+	font-weight: 500;
+	font-size: 16px;
+	margin: 8px 0 5px;
+	color: #32323d;
+	line-height: 1.56;
+}
+.top100 .title:hover{
+	color: #6e55b4;
+}
