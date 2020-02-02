@@ -1,0 +1,21 @@
+body{
+  
+}
+section.jumbotron{
+  background-color: #fff;
+}
+.jumbotron .container{
+  max-width: 40rem;
+}
+.jumbotron-heading{
+  font-weight: 300;
+}
+section.album img{ 
+  height: 225px;
+}
+.shadow-sm{
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+footer p.float-right{
+  cursor: pointer;
+}

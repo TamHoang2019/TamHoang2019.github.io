@@ -1,0 +1,9 @@
+BÀI 15
+1/Tìm vị trí 1 phần tử.
+selector.offset().top 
+2/easing jquery gsgd: Thư viện gia tốc chuyển động.
+3/bài tập: amoeba; shapebootstrap.net/demo/html/multi; blackrockdigital.github.io/startbootstrap-agency; techgut; single pro;
+4/fancy box: bài 22
+5/ Bài tập về transition.
+6/ Bài tập về hiệu ứng load animation
+muffingroup/be sitter

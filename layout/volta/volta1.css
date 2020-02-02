@@ -1,0 +1,47 @@
+*{margin:0 ; padding: 0}
+#banner {
+  margin-top: 47px;
+}
+#banner a{
+  text-transform: uppercase;
+  color: #888;
+}
+#banner .top {
+
+}
+#banner .top .dropdown{
+  display: inline-block;
+}
+#banner .top form{
+  display: inline-flex;
+  float: right;
+  width: 248px;
+  height: 50px;
+  border: 1px solid #eee;
+}
+#banner .top form input {
+  border: none;
+  height: 48px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  padding-left: 22px;
+
+}
+#banner .top form button {
+  border: none;
+  /* height: 48px; */
+  background-color: #fff;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+#banner .top form button
+#banner .bottom{
+
+}
+
+@media (max-width: 991px){
+  #banner .top form{
+    width: 100%;
+  }
+}

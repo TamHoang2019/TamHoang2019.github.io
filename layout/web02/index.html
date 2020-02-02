@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web 02 - carousel</title>
+  <link rel="stylesheet" href="../../vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="../../vendor/font-awesome.min.css">
+  <link rel="stylesheet" href="web02.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Carousel</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;  
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Home </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+              
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div>
+  </nav>
+  <main>
+    <section class="slide2">
+      <div id="my-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#my-carousel" data-slide-to="0" aria-current="location"></li>
+          <li data-target="#my-carousel" data-slide-to="1"></li>
+          <li data-target="#my-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- <img class="d-block w-100" src="https://via.placeholder.com/1200x500/55595c/eceeef" alt="">
+             -->
+            <svg class="d-block w-100" width="1200" height="500" role="img">
+              <rect width="100%" height="100%" fill="#777"></rect>
+            </svg>
+            
+            <div class="carousel-caption  d-md-block text-center">
+              <h1>Example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <button class="btn btn-lg btn-primary">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="d-block w-100" width="1200" height="500" role="img">
+                <rect width="100%" height="100%" fill="#777"></rect>
+            </svg>
+            <div class="carousel-caption d-md-block text-left">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <button class="btn btn-lg btn-primary">Learn more</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="d-block w-100" width="1200" height="500" role="img">
+              <rect width="100%" height="100%" fill="#777"></rect>
+            </svg>
+            <div class="carousel-caption d-md-block text-right">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <button class="btn btn-lg btn-primary">Browser Gallery</button>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#my-carousel" data-slide="prev" role="button">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#my-carousel" data-slide="next" role="button">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <!-- javascript lib -->
+<script type="text/javascript" src="../../vendor/jquery.min.js"></script>
+<script type="text/javascript" src="../../vendor/bootstrap.min.js"></script>
+</body>
+</html>

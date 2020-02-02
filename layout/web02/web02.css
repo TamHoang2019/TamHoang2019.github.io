@@ -1,0 +1,6 @@
+section.slide2 .carousel-item{
+  min-height: 32rem;
+}
+section.slide2 .carousel-caption{
+  margin-bottom: 3rem;
+}
