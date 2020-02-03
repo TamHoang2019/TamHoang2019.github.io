@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+      html {
+      font-family: sans-serif;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .f8-link {
+      position: fixed;
+      bottom: 8px;
+    }
+
+    .search-bar {
+      position: relative;
+    }
+
+    .search-bar__input:focus ~ .search-bar__history:not(:empty) {
+      display: block;
+    }
+
+    .search-bar__history {
+      position: absolute;
+      top: 12px;
+      min-width: 200px;
+      padding-left: 0;
+      box-shadow: 0 0 3px #ccc;
+      display: none;
+    }
+
+    .search-bar__history-item {
+      list-style: none;
+      font-size: 14px;
+      padding: 4px 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .search-bar__history-item:hover {
+      cursor: pointer;
+      background: #f7f7f7;
+    }
+
+    .search-bar__history-remove {
+      font-size: 12px;
+      color: #ED5D65;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="row search-bar">
+    <input type="text" class="search-bar__input" placeholder="Enter something...Plz!">
+    <ul class="search-bar__history"></ul>
+    <button class="search-bar__search-btn">Search. Plz!</button>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'storageKey';
+    const KEYWORDS_KEY = 'searchKeywords';
+    const ENTER_KEY_CODE = 13;
+
+    const Cache = new Storage(STORAGE_KEY);
+    const searchInputNode = document.querySelector('.search-bar__input');
+    const searchBtnNode = document.querySelector('.search-bar__search-btn');
+    const searchHistoryNode = document.querySelector('.search-bar__history');
+
+    searchBtnNode.onclick = function() {
+      handleSearch(searchInputNode.value);
+    };
+
+    searchHistoryNode.onclick = function(e) {
+      handleRemoveHistoryItem(e);
+      handleSearchByHistory(e);
+    };
+
+    searchInputNode.onkeydown = function(e) {
+      if (e.keyCode === ENTER_KEY_CODE) {
+        handleSearch(searchInputNode.value);
+      }
+    }
+
+    searchHistoryNode.onmousedown = function(e) {
+      e.preventDefault();
+    }
+
+    renderSearchHistory();
+
+    function handleSearch(keyword) {
+      if (keyword) {
+        const cachedKeywords = Cache.get(KEYWORDS_KEY, []);
+        if (!cachedKeywords.includes(keyword)) {
+          Cache.set(KEYWORDS_KEY, [...cachedKeywords, keyword]);
+          renderSearchHistory();
+        }
+        
+        searchInputNode.value = '';
+        // handle search. Call API or similar...
+        alert(`Call API or similar... (${keyword})`);
+      }
+    }
+
+    // @NOTE: Event Delegation in Javascript
+    function handleRemoveHistoryItem(event) {
+      if (event.target.classList.contains('search-bar__history-remove')) {
+        const historyIndex = event.target.getAttribute('data-index');
+        const cachedKeywords = Cache.get(KEYWORDS_KEY, []);
+        cachedKeywords.splice(historyIndex, 1);
+        Cache.set(KEYWORDS_KEY, cachedKeywords);
+        renderSearchHistory();
+      }
+    }
+
+    // @NOTE: Event Delegation in Javascript
+    function handleSearchByHistory(event) {
+      if (event.target.classList.contains('search-bar__history-item')) {
+        const historyValue = event.target.getAttribute('data-value');
+        handleSearch(historyValue);
+      }
+    }
+
+    function renderSearchHistory() {
+      let html = '';
+      const histories = Cache.get(KEYWORDS_KEY, []);
+      let i = histories.length;
+      while(i > 0) {
+        i--;
+        html += `
+          <li class="search-bar__history-item" data-value="${histories[i]}">
+            ${histories[i]}
+            <span class="search-bar__history-remove" data-index="${i}">Remove</span>
+          </li>
+        `;
+      }
+      searchHistoryNode.innerHTML = html;
+    }
+
+    /* 
+      @NOTE:
+          1. localStorage in Javascript
+          2. Object constructor in Javascript
+          3. Higher order function
+    */
+    function Storage(storageKey) {
+      const store = JSON.parse(localStorage.getItem(storageKey)) || {};
+      const save = function() {
+        localStorage.setItem(storageKey, JSON.stringify(store));
+        return store;
+      }
+      
+      this.get = function(key, defaultValue) {
+        if (typeof store[key] !== 'undefined' && store[key]) {
+          return store[key];
+        }
+        return defaultValue;
+      }
+      this.set = function(key, value) {
+        store[key] = value;
+        save();
+        return value;
+      }
+      // you can add some methods here. Eg. has, flush, ...
+    }
+
+  </script>
+</body>
+</html>
